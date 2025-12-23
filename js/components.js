@@ -20,33 +20,33 @@ function initComponentAnimations(container) {
 
 class SiteHeader extends HTMLElement {
   connectedCallback() {
-      fetch('components/header.html')
+    fetch('/components/header.html')
       .then(response => response.text())
       .then(data => {
-          this.innerHTML = data;
-          this.initMobileMenu();
+        this.innerHTML = data;
+        this.initMobileMenu();
       })
       .catch(err => console.error('Error loading header:', err));
   }
 
   initMobileMenu() {
-      const mobileToggle = this.querySelector('#mobileToggle');
-      const mobileMenu = this.querySelector('#mobileMenu');
-      if (mobileToggle && mobileMenu) {
-          mobileToggle.addEventListener('click', () => {
-              mobileMenu.classList.toggle('hidden');
-          });
-          mobileMenu.querySelectorAll('a').forEach(link => {
-             link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
-          });
-      }
+    const mobileToggle = this.querySelector('#mobileToggle');
+    const mobileMenu = this.querySelector('#mobileMenu');
+    if (mobileToggle && mobileMenu) {
+      mobileToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+      });
+    }
   }
 }
 customElements.define('site-header', SiteHeader);
 
 class SiteFooter extends HTMLElement {
   connectedCallback() {
-      fetch('components/footer.html')
+    fetch('/components/footer.html')
       .then(response => response.text())
       .then(data => {
         this.innerHTML = data;
@@ -58,12 +58,12 @@ customElements.define('site-footer', SiteFooter);
 
 class ContactSection extends HTMLElement {
   connectedCallback() {
-      fetch('components/contact.html')
+    fetch('/components/contact.html')
       .then(response => response.text())
       .then(data => {
-          this.innerHTML = data;
-          // Initialize animations for the loaded content
-          initComponentAnimations(this);
+        this.innerHTML = data;
+        // Initialize animations for the loaded content
+        initComponentAnimations(this);
       })
       .catch(err => console.error('Error loading contact section:', err));
   }
