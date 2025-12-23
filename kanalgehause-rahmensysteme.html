@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kanalgehäuse und Rahmensysteme | Filtega</title>
+  <meta name="description"
+    content="Modulare Filteranlagen, Kombinationsgehäuse und Aufnahmerahmen für Lüftungsanlagen. Vario CAT, Solid CAT, S044, Schwebstoff-Kanalfilter." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              orange: '#ea8323',
+              blue: '#304670',
+              purple: '#323485'
+            },
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    html {
+      font-size: 18px;
+      scroll-behavior: smooth;
+    }
+
+    /* Fixed-size privacy checkbox with tick (works regardless of Tailwind peer variants) */
+    .privacy-box {
+      position: relative;
+      display: inline-flex;
+      width: 1.05rem;
+      height: 1.05rem;
+      flex-shrink: 0;
+      border-radius: 0.42rem;
+      background: #E98322;
+    }
+
+    .privacy-input:checked+.privacy-box::after {
+      content: "";
+      position: absolute;
+      inset: 0.18rem 0.22rem 0.2rem 0.3rem;
+      border-right: 2px solid #fff;
+      border-bottom: 2px solid #fff;
+      transform: rotate(45deg);
+    }
+
+    .privacy-input:focus-visible+.privacy-box {
+      outline: 2px solid rgba(233, 131, 34, .75);
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-slate-900 font-sans antialiased">
+  <site-header></site-header>
+
+  <main>
+    <!-- HERO (fixed: visible CTAs, better layout, right image 1:1) -->
+    <section class="relative px-6 pt-28 pb-16">
+      <div
+        class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(236,237,248,1)_0%,rgba(255,255,255,1)_55%)]">
+      </div>
+
+      <div class="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-2">
+        <div>
+          <div class="mb-5 flex flex-wrap items-center gap-2 text-[0.8rem] text-slate-600">
+            <a href="/"
+              class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/80 px-3 py-1 backdrop-blur transition hover:bg-white">
+              <i class="fa-solid fa-house text-[0.7rem]"></i> Start
+            </a>
+            <span class="text-slate-300">/</span>
+            <span
+              class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/80 px-3 py-1 backdrop-blur">
+              <i class="fa-solid fa-cube text-[0.75rem] text-brand-orange"></i>
+              Kanalgehäuse
+            </span>
+          </div>
+
+          <p
+            class="js-animate mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-brand-orange opacity-0 translate-y-10 transition duration-700">
+            Produktkategorie</p>
+          <h1
+            class="js-animate text-3xl font-bold leading-tight tracking-tight text-slate-900 sm:text-4xl lg:text-5xl opacity-0 translate-y-10 transition duration-700 delay-100">
+            Kanalgehäuse und Rahmensysteme für Lüftungsanlagen
+          </h1>
+
+          <p
+            class="js-animate mt-4 max-w-xl text-[1.05rem] leading-relaxed text-slate-600 opacity-0 translate-y-10 transition duration-700 delay-200">
+            Modulare Filteranlagen, Kombinationsgehäuse und Aufnahmerahmen. Flexibel anpassbar an Ihre
+            Prozessbedingungen und Klimatechnik.
+          </p>
+
+          <div class="js-animate mt-6 flex flex-wrap gap-2 opacity-0 translate-y-10 transition duration-700 delay-300">
+            <span
+              class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1 text-[0.8rem] text-slate-700 shadow-sm">
+              <span class="h-1.5 w-1.5 rounded-full bg-brand-orange"></span>
+              Modulare Bauweise
+            </span>
+            <span
+              class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1 text-[0.8rem] text-slate-700 shadow-sm">
+              <i class="fa-solid fa-check text-[0.8rem] text-brand-orange"></i>
+              VDI 6022 konform
+            </span>
+            <span
+              class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1 text-[0.8rem] text-slate-700 shadow-sm">
+              <i class="fa-solid fa-gears text-[0.8rem] text-brand-orange"></i>
+              Höchste Flexibilität
+            </span>
+          </div>
+
+          <div class="js-animate mt-8 flex flex-wrap gap-3 opacity-0 translate-y-10 transition duration-700 delay-500">
+            <a href="#produkte"
+              class="inline-flex items-center gap-2 rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800">
+              Produkte ansehen <span class="text-xs opacity-80">→</span>
+            </a>
+            <a href="#kontakt"
+              class="inline-flex items-center gap-2 rounded-full bg-brand-orange px-6 py-3 text-sm font-semibold text-white shadow-[0_18px_40px_rgba(233,131,34,0.35)] transition hover:bg-orange-600">
+              Jetzt beraten lassen <span class="text-xs opacity-90">→</span>
+            </a>
+          </div>
+
+          <p class="mt-4 text-[0.75rem] text-slate-500">
+            *Individuelle Ausführungen nach Maß.
+          </p>
+        </div>
+
+        <div class="js-animate relative opacity-0 translate-y-10 transition duration-700 delay-700">
+          <div
+            class="overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-[0_30px_90px_rgba(15,23,42,0.12)]">
+            <div class="aspect-square w-full overflow-hidden bg-slate-100">
+              <img src="/images/products/categories/kanalgehause-rahmensysteme.avif" alt="Kanalgehäuse"
+                class="h-full w-full object-cover" loading="lazy" />
+            </div>
+            <div class="p-6">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <h3 class="mt-1 text-lg font-semibold text-slate-900">Universelle Anpassung</h3>
+                  <p class="mt-2 text-[0.95rem] leading-relaxed text-slate-600">
+                    Von einfachen Zu-/Abluftfiltern bis zu mehrstufigen Komplettlösungen inklusive Lüfter.
+                  </p>
+                </div>
+                <span
+                  class="hidden rounded-2xl bg-slate-900 px-3 py-2 text-[0.75rem] font-semibold text-white sm:inline-flex">
+                  Premium
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section id="produkte" class="px-6 pb-20">
+      <div class="mx-auto max-w-6xl">
+        <div
+          class="js-animate mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between opacity-0 translate-y-10 transition duration-700">
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.16em] text-brand-orange">Produkte in dieser Kategorie
+            </p>
+            <h2 class="mt-2 text-3xl font-bold tracking-tight text-slate-900">
+              Gehäuse &amp; Rahmen
+            </h2>
+            <p class="mt-2 max-w-2xl text-[1rem] leading-relaxed text-slate-600">
+              Stabile Systeme für Standard- und Spezialanwendungen.
+            </p>
+          </div>
+
+          <a href="#kontakt"
+            class="inline-flex items-center gap-2 self-start rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-900 shadow-sm transition hover:bg-slate-50 sm:self-auto">
+            Angebot anfragen
+            <span class="text-brand-orange transition-transform duration-150 hover:translate-x-1">→</span>
+          </a>
+        </div>
+
+        <div class="flex flex-col gap-6">
+          <!-- 1. Vario CAT -->
+          <article
+            class="js-animate group flex flex-col md:flex-row-reverse overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-[0_18px_50px_rgba(15,23,42,0.08)] transition hover:shadow-[0_26px_70px_rgba(15,23,42,0.12)] opacity-0 translate-y-10 duration-700 delay-100">
+            <div class="relative w-full aspect-square shrink-0 overflow-hidden bg-slate-100 md:w-1/3 lg:w-[360px]">
+              <div class="absolute inset-0 bg-slate-900/0 transition group-hover:bg-slate-900/[0.02]"></div>
+              <img src="/images/products/categories/kanalgehause-rahmensysteme.avif"
+                alt="Vario CAT modulare Filteranlagen"
+                class="h-full w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" />
+              <div
+                class="absolute left-4 top-4 inline-flex items-center gap-2 rounded-full bg-white/90 px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-slate-900 shadow-sm backdrop-blur">
+                <i class="fa-solid fa-shapes text-brand-orange"></i>
+                Modular
+              </div>
+            </div>
+            <div class="flex flex-1 flex-col p-6 sm:p-10">
+              <div class="mb-4">
+                <h3 class="text-2xl font-bold tracking-tight text-slate-900">Vario CAT modulare Filteranlagen</h3>
+                <p class="text-sm font-medium text-brand-orange">VDI 6022 konform & flexibel</p>
+              </div>
+              <div class="prose prose-slate prose-sm max-w-none text-slate-600 leading-relaxed mb-8">
+                <p>
+                  Das Vario CAT Programm ist die Lösung Ihrer Aufgabenstellung im Bereich der Luftfiltration. Universal
+                  lässt es sich den verschiedensten Anforderungen anpassen. Von der einfachen einstufigen Zu- oder
+                  Abluftfiltration mit Taschenfiltern bis zur mehrstufigen Komplettlösung inklusive regelbarem Lüfter.
+                </p>
+                <p>
+                  Das System wird im Modulbauverfahren aus speziell für die Klimatechnik entwickelten Aluminiumprofilen
+                  und stabilem verzinkten Stahlblech gefertigt. Das Profil bietet einen 30mm umlaufenden Rahmen der
+                  direkt zum Kanalanschluß oder zur Anbringung von Übergangsstücken mit Flansch oder Rohranschluß
+                  geeignet ist.
+                </p>
+                <p>
+                  Individuell können Sie wählen, über welchen Volumenstrom, welche Filterbestückung, welche Anbauteile
+                  oder Einbaulage Ihre Filteranlage verfügen soll.
+                </p>
+              </div>
+              <div
+                class="mt-auto flex flex-col gap-6 border-t border-slate-100 pt-6 sm:flex-row sm:items-center sm:justify-between">
+                <!-- Documents -->
+                <div class="flex flex-col gap-2">
+                  <span class="text-[0.65rem] font-bold uppercase tracking-widest text-slate-400">Dokumente</span>
+                  <div class="flex flex-wrap gap-4">
+                    <a href="http://filtega.de/pdf/Vario_CAT_modulare_Filteranlagen.pdf" target="_blank"
+                      class="group/link flex items-center gap-2 text-sm font-medium text-slate-600 transition hover:text-brand-orange">
+                      <i class="fa-solid fa-file-pdf text-slate-400 transition group-hover/link:text-brand-orange"></i>
+                      <span>Datenblatt Vario-Cat</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="flex-shrink-0">
+                  <a href="#kontakt"
+                    class="inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-orange px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-orange-500/20 transition hover:bg-orange-600 hover:-translate-y-0.5 sm:w-auto">
+                    Jetzt anfragen
+                    <i class="fa-solid fa-arrow-right text-xs opacity-70"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. Solid CAT -->
+          <article
+            class="js-animate group flex flex-col md:flex-row-reverse overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-[0_18px_50px_rgba(15,23,42,0.08)] transition hover:shadow-[0_26px_70px_rgba(15,23,42,0.12)] opacity-0 translate-y-10 duration-700 delay-100">
+            <div class="relative w-full aspect-square shrink-0 overflow-hidden bg-slate-100 md:w-1/3 lg:w-[360px]">
+              <div class="absolute inset-0 bg-slate-900/0 transition group-hover:bg-slate-900/[0.02]"></div>
+              <img src="/images/products/categories/kanalgehause-rahmensysteme.avif" alt="Solid CAT"
+                class="h-full w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" />
+              <div
+                class="absolute left-4 top-4 inline-flex items-center gap-2 rounded-full bg-white/90 px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-slate-900 shadow-sm backdrop-blur">
+                <i class="fa-solid fa-shield-halved text-brand-orange"></i>
+                Edelstahl
+              </div>
+            </div>
+            <div class="flex flex-1 flex-col p-6 sm:p-10">
+              <div class="mb-4">
+                <h3 class="text-2xl font-bold tracking-tight text-slate-900">Solid CAT Kombinationsgehäuse</h3>
+                <p class="text-sm font-medium text-brand-orange">Geschweißter Edelstahl für höchste Anforderungen</p>
+              </div>
+              <div class="prose prose-slate prose-sm max-w-none text-slate-600 leading-relaxed mb-8">
+                <p>
+                  Das Solid CAT Kanalgehäuse erfüllt Ihren Leistungsbedarf in allen Luftkanalsystemen mit höchsten
+                  Anforderungen an die Luftreinheit. Das modulare Konzept erlaubt kostengünstig die bedarfsgerechte
+                  Anpassung an Ihre Prozessbedingungen.
+                </p>
+                <p>
+                  Solid CAT Gehäuse bestehen aus geschweißtem Edelstahl (1.4301 wahlweise auch 1.4404 bzw. 14571). Solid
+                  CAT können mit Kombinationen von Grob- bzw. Feinstaub- und/oder Schwebstoffiltern bis Klasse EN 1822
+                  H14 bestückt werden. Auch die Aufnahme von Molekularfiltern ist möglich.
+                </p>
+                <p>
+                  Der umlaufende 30 mm Anschlussflansch kann bauseits mit Bohrungen versehen werden, um problemlos an
+                  gängige Kanäle angeschlossen zu werden.
+                </p>
+              </div>
+              <div
+                class="mt-auto flex flex-col gap-6 border-t border-slate-100 pt-6 sm:flex-row sm:items-center sm:justify-between">
+                <!-- Documents -->
+                <div class="flex flex-col gap-2">
+                  <span class="text-[0.65rem] font-bold uppercase tracking-widest text-slate-400">Dokumente</span>
+                  <div class="flex flex-wrap gap-4">
+                    <a href="http://filtega.de/pdf/Solid_CAT_Kombinationsgehäuse_aus_geschweißtem_Edelstahl.pdf"
+                      target="_blank"
+                      class="group/link flex items-center gap-2 text-sm font-medium text-slate-600 transition hover:text-brand-orange">
+                      <i class="fa-solid fa-file-pdf text-slate-400 transition group-hover/link:text-brand-orange"></i>
+                      <span>Datenblatt Solid-Cat</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="flex-shrink-0">
+                  <a href="#kontakt"
+                    class="inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-orange px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-orange-500/20 transition hover:bg-orange-600 hover:-translate-y-0.5 sm:w-auto">
+                    Jetzt anfragen
+                    <i class="fa-solid fa-arrow-right text-xs opacity-70"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. S044 -->
+          <article
+            class="js-animate group flex flex-col md:flex-row-reverse overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-[0_18px_50px_rgba(15,23,42,0.08)] transition hover:shadow-[0_26px_70px_rgba(15,23,42,0.12)] opacity-0 translate-y-10 duration-700 delay-100">
+            <div class="relative w-full aspect-square shrink-0 overflow-hidden bg-slate-100 md:w-1/3 lg:w-[360px]">
+              <div class="absolute inset-0 bg-slate-900/0 transition group-hover:bg-slate-900/[0.02]"></div>
+              <img src="/images/products/categories/kanalgehause-rahmensysteme.avif" alt="S044 Kanalgehäuse"
+                class="h-full w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" />
+              <div
+                class="absolute left-4 top-4 inline-flex items-center gap-2 rounded-full bg-white/90 px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-slate-900 shadow-sm backdrop-blur">
+                <i class="fa-solid fa-door-open text-brand-orange"></i>
+                Einfache Wartung
+              </div>
+            </div>
+            <div class="flex flex-1 flex-col p-6 sm:p-10">
+              <div class="mb-4">
+                <h3 class="text-2xl font-bold tracking-tight text-slate-900">S044 Kanalgehäuse</h3>
+                <p class="text-sm font-medium text-brand-orange">Stabiles Stahlblech mit Bedienungstür</p>
+              </div>
+              <div class="prose prose-slate prose-sm max-w-none text-slate-600 leading-relaxed mb-8">
+                <p>
+                  Das S044 ist ein stabiles Kanalgehäuse aus sendzimirverzinktem oder lackiertem Stahlblech mit
+                  seitlicher Bedienungstür zum Filterwechsel. Die Anordnung der Tür ist wahlweise links oder rechts,
+                  bezogen auf die Luftrichtung. Der Gehäuserahmen mit den breiten Dichtflächen ist gleichzeitig
+                  Anschlussrahmen für Anschlussgeräte und Luftkanäle.
+                </p>
+                <p>
+                  Die Aufnahme und Befestigung der Filterzellen im Kanalgehäuse erfolgt in einem Rahmensystem aus
+                  gasdicht geschweißten Aluminiumprofilen. Auflagewinkel und Spindel-Anpressvorrichtung gewährleisten
+                  einen exakten Sitz und eine einwandfreie Abdichtung.
+                </p>
+              </div>
+              <div
+                class="mt-auto flex flex-col gap-6 border-t border-slate-100 pt-6 sm:flex-row sm:items-center sm:justify-between">
+                <!-- Documents -->
+                <div class="flex flex-col gap-2">
+                  <span class="text-[0.65rem] font-bold uppercase tracking-widest text-slate-400">Dokumente</span>
+                  <div class="flex flex-wrap gap-4">
+                    <a href="http://filtega.de/pdf/S044,%20Kanalfiltergehäuse.pdf" target="_blank"
+                      class="group/link flex items-center gap-2 text-sm font-medium text-slate-600 transition hover:text-brand-orange">
+                      <i class="fa-solid fa-file-pdf text-slate-400 transition group-hover/link:text-brand-orange"></i>
+                      <span>Datenblatt S044</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="flex-shrink-0">
+                  <a href="#kontakt"
+                    class="inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-orange px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-orange-500/20 transition hover:bg-orange-600 hover:-translate-y-0.5 sm:w-auto">
+                    Jetzt anfragen
+                    <i class="fa-solid fa-arrow-right text-xs opacity-70"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. S041 Schwebstoff -->
+          <article
+            class="js-animate group flex flex-col md:flex-row-reverse overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-[0_18px_50px_rgba(15,23,42,0.08)] transition hover:shadow-[0_26px_70px_rgba(15,23,42,0.12)] opacity-0 translate-y-10 duration-700 delay-100">
+            <div class="relative w-full aspect-square shrink-0 overflow-hidden bg-slate-100 md:w-1/3 lg:w-[360px]">
+              <div class="absolute inset-0 bg-slate-900/0 transition group-hover:bg-slate-900/[0.02]"></div>
+              <img src="/images/products/categories/kanalgehause-rahmensysteme.avif" alt="S041 Schwebstoff-Kanalfilter"
+                class="h-full w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" />
+              <div
+                class="absolute left-4 top-4 inline-flex items-center gap-2 rounded-full bg-white/90 px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-slate-900 shadow-sm backdrop-blur">
+                <i class="fa-solid fa-virus-slash text-brand-orange"></i>
+                Maximale Sicherheit
+              </div>
+            </div>
+            <div class="flex flex-1 flex-col p-6 sm:p-10">
+              <div class="mb-4">
+                <h3 class="text-2xl font-bold tracking-tight text-slate-900">S041 Schwebstoff-Kanalfilter</h3>
+                <p class="text-sm font-medium text-brand-orange">Für höchste Reinheitsanforderungen</p>
+              </div>
+              <div class="prose prose-slate prose-sm max-w-none text-slate-600 leading-relaxed mb-8">
+                <p>
+                  Schwebstoff-Kanalfilter werden eingesetzt, wenn maximale Forderungen an die Sicherheit und an den
+                  Abscheidegrad der Filter gestellt werden. z.B.: als Keimfilter in Krankenanstalten, als Staub- und
+                  Aerosolfilter in Laboratorien, beim Prozessschutz in Fertigungs- und Forschungsstätten und überall
+                  dort, wo reinste Luft unerlässlich ist.
+                </p>
+                <p>
+                  Aber auch bei Reinigung der Abluft werden Schwebstoff-Kanalfilter benötigt, wenn radioaktive,
+                  pathogene oder toxische Stoffe abzuscheiden sind.
+                </p>
+              </div>
+              <div
+                class="mt-auto flex flex-col gap-6 border-t border-slate-100 pt-6 sm:flex-row sm:items-center sm:justify-between">
+                <!-- Documents -->
+                <div class="flex flex-col gap-2">
+                  <span class="text-[0.65rem] font-bold uppercase tracking-widest text-slate-400">Dokumente</span>
+                  <div class="flex flex-wrap gap-4">
+                    <a href="http://filtega.de/pdf/S041_Schwebstoff-Kanalfilter.pdf" target="_blank"
+                      class="group/link flex items-center gap-2 text-sm font-medium text-slate-600 transition hover:text-brand-orange">
+                      <i class="fa-solid fa-file-pdf text-slate-400 transition group-hover/link:text-brand-orange"></i>
+                      <span>Datenblatt S041</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="flex-shrink-0">
+                  <a href="#kontakt"
+                    class="inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-orange px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-orange-500/20 transition hover:bg-orange-600 hover:-translate-y-0.5 sm:w-auto">
+                    Jetzt anfragen
+                    <i class="fa-solid fa-arrow-right text-xs opacity-70"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+
+          <!-- 5. Aufnahmerahmen -->
+          <article
+            class="js-animate group flex flex-col md:flex-row-reverse overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-[0_18px_50px_rgba(15,23,42,0.08)] transition hover:shadow-[0_26px_70px_rgba(15,23,42,0.12)] opacity-0 translate-y-10 duration-700 delay-100">
+            <div class="relative w-full aspect-square shrink-0 overflow-hidden bg-slate-100 md:w-1/3 lg:w-[360px]">
+              <div class="absolute inset-0 bg-slate-900/0 transition group-hover:bg-slate-900/[0.02]"></div>
+              <img src="/images/products/categories/kanalgehause-rahmensysteme.avif" alt="Aufnahmerahmen"
+                class="h-full w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" />
+              <div
+                class="absolute left-4 top-4 inline-flex items-center gap-2 rounded-full bg-white/90 px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-slate-900 shadow-sm backdrop-blur">
+                <i class="fa-solid fa-up-right-and-down-left-from-center text-brand-orange"></i>
+                Flexibel
+              </div>
+            </div>
+            <div class="flex flex-1 flex-col p-6 sm:p-10">
+              <div class="mb-4">
+                <h3 class="text-2xl font-bold tracking-tight text-slate-900">Aufnahmerahmen</h3>
+                <p class="text-sm font-medium text-brand-orange">Für Neukonstruktion oder Umbau</p>
+              </div>
+              <div class="prose prose-slate prose-sm max-w-none text-slate-600 leading-relaxed mb-8">
+                <p>
+                  Unsere Aufnahmerahmen finden Anwendung bei der Neukonstruktion oder Umbau von Lufttechnischen Anlagen.
+                  Durch das innovative Stecksystem sind individuelle Bauvarianten schnell aufgebaut. Einsetzbar sind
+                  diese Aufnahmerahmen unter anderem für unsere Taschenfilter, Z-Line und Rahmenfilter (bis 48 mm
+                  Stärke), Kompaktfilter und Compapleat-Filter.
+                </p>
+                <p>
+                  Weiterhin sind auch Aufnahme-Systeme für Feinstaub- und Schwebstofffilter mit Kastenrahmen bis zu
+                  einer Rahmentiefe von 292 mm lieferbar.
+                </p>
+              </div>
+              <div
+                class="mt-auto flex flex-col gap-6 border-t border-slate-100 pt-6 sm:flex-row sm:items-center sm:justify-between">
+                <div class="flex-shrink-0">
+                  <a href="#kontakt"
+                    class="inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-orange px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-orange-500/20 transition hover:bg-orange-600 hover:-translate-y-0.5 sm:w-auto">
+                    Jetzt anfragen
+                    <i class="fa-solid fa-arrow-right text-xs opacity-70"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+
+          <!-- 6. Z035 -->
+          <article
+            class="js-animate group flex flex-col md:flex-row-reverse overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-[0_18px_50px_rgba(15,23,42,0.08)] transition hover:shadow-[0_26px_70px_rgba(15,23,42,0.12)] opacity-0 translate-y-10 duration-700 delay-100">
+            <div class="relative w-full aspect-square shrink-0 overflow-hidden bg-slate-100 md:w-1/3 lg:w-[360px]">
+              <div class="absolute inset-0 bg-slate-900/0 transition group-hover:bg-slate-900/[0.02]"></div>
+              <img src="/images/products/categories/kanalgehause-rahmensysteme.avif" alt="Z035 Zellenkanalfilter"
+                class="h-full w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" />
+              <div
+                class="absolute left-4 top-4 inline-flex items-center gap-2 rounded-full bg-white/90 px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-slate-900 shadow-sm backdrop-blur">
+                <i class="fa-solid fa-gauge-high text-brand-orange"></i>
+                Optionales Manometer
+              </div>
+            </div>
+            <div class="flex flex-1 flex-col p-6 sm:p-10">
+              <div class="mb-4">
+                <h3 class="text-2xl font-bold tracking-tight text-slate-900">Z035 Zellenkanalfilter</h3>
+                <p class="text-sm font-medium text-brand-orange">Flachbauweise mit Revisionsdeckel</p>
+              </div>
+              <div class="prose prose-slate prose-sm max-w-none text-slate-600 leading-relaxed mb-8">
+                <p>
+                  Das Zellenkanalfilter Typ Z035 (flach) besteht aus Gehäuse mit Revisionsdeckel und dem
+                  Einschub-Schnellwechselrahmen mit Stützgitter und Andruckspange. Das Gehäuse ist standardmäßig aus
+                  verzinktem Stahlblech gefertigt und hat beidseitig einen Anschlußflansch. Wahlweise können die
+                  Einheiten auch aus Edelstahl gefertigt werden.
+                </p>
+                <p>
+                  Auf Wunsch werden die Filtergehäuse mit einem Manometer zum Ablesen der Druckdifferenz ausgeliefert.
+                </p>
+              </div>
+              <div
+                class="mt-auto flex flex-col gap-6 border-t border-slate-100 pt-6 sm:flex-row sm:items-center sm:justify-between">
+                <!-- Documents -->
+                <div class="flex flex-col gap-2">
+                  <span class="text-[0.65rem] font-bold uppercase tracking-widest text-slate-400">Dokumente</span>
+                  <div class="flex flex-wrap gap-4">
+                    <a href="http://filtega.de/pdf/Z035_Zellenkanalfilter.pdf" target="_blank"
+                      class="group/link flex items-center gap-2 text-sm font-medium text-slate-600 transition hover:text-brand-orange">
+                      <i class="fa-solid fa-file-pdf text-slate-400 transition group-hover/link:text-brand-orange"></i>
+                      <span>Datenblatt Z035</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="flex-shrink-0">
+                  <a href="#kontakt"
+                    class="inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-orange px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-orange-500/20 transition hover:bg-orange-600 hover:-translate-y-0.5 sm:w-auto">
+                    Jetzt anfragen
+                    <i class="fa-solid fa-arrow-right text-xs opacity-70"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="mt-10 rounded-3xl border border-slate-100 bg-slate-50 p-6 text-[0.9rem] text-slate-600">
+          <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+            <p><span class="font-semibold text-slate-900">Hinweis:</span> Individuelle Bauvarianten und Sondergrößen
+              sind durch unsere modularen Systeme problemlos möglich.</p>
+            <a href="#kontakt"
+              class="inline-flex items-center gap-2 self-start rounded-full bg-white px-4 py-2 text-sm font-semibold text-slate-900 shadow-sm transition hover:bg-slate-100 sm:self-auto">
+              Beratung starten
+              <span class="text-brand-orange transition-transform duration-150 hover:translate-x-1">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <contact-section></contact-section>
+
+    <site-footer></site-footer>
+  </main>
+
+  <script>
+
+
+    // Scroll animations
+    const animated = document.querySelectorAll('.js-animate');
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.remove('opacity-0', 'translate-y-10');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.14, rootMargin: '0px 0px -60px 0px' }
+    );
+    animated.forEach((el) => observer.observe(el));
+  </script>
+
+
+
+</body>
+
+<script src="js/components.js"></script>
+
+</html>
