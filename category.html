@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lackier- & Kartonfilter | Filtega</title>
+  <meta name="description"
+    content="Kartonfilter, Paint-Stop und Dust-Stop für Lackieranlagen. Hohe Staubspeicherfähigkeit, optimierte Standzeiten und weniger Entsorgung." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              orange: '#ea8323',
+              blue: '#304670',
+              purple: '#323485'
+            },
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    html {
+      font-size: 18px;
+      scroll-behavior: smooth;
+    }
+
+    /* Fixed-size privacy checkbox with tick (works regardless of Tailwind peer variants) */
+    .privacy-box {
+      position: relative;
+      display: inline-flex;
+      width: 1.05rem;
+      height: 1.05rem;
+      flex-shrink: 0;
+      border-radius: 0.42rem;
+      background: #E98322;
+    }
+
+    .privacy-input:checked+.privacy-box::after {
+      content: "";
+      position: absolute;
+      inset: 0.18rem 0.22rem 0.2rem 0.3rem;
+      border-right: 2px solid #fff;
+      border-bottom: 2px solid #fff;
+      transform: rotate(45deg);
+    }
+
+    .privacy-input:focus-visible+.privacy-box {
+      outline: 2px solid rgba(233, 131, 34, .75);
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-slate-900 font-sans antialiased">
+  <!-- Header -->
+  <header class="fixed inset-x-0 top-0 z-40 border-b border-black/5 bg-white/80 backdrop-blur-xl">
+    <div class="mx-auto flex h-14 max-w-6xl items-center justify-between px-6 lg:max-w-7xl">
+      <a href="index.html" class="flex items-center gap-2 text-[1.05rem] font-semibold tracking-tight">
+        <img src="images/logo-s.svg" alt="Filtega" class="h-3 w-auto object-contain" />
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="hidden items-center gap-2 md:flex">
+        <!-- Produkte with mega-menu -->
+        <div class="relative group">
+          <button
+            class="flex items-center gap-1 rounded-full px-3 py-2 text-xs font-medium text-slate-800/80 transition hover:bg-slate-100 hover:text-slate-900">
+            Produkte
+            <i class="fa-solid fa-chevron-down text-[0.55rem] opacity-70"></i>
+          </button>
+
+          <div
+            class="pointer-events-none absolute left-1/2 top-full z-30 hidden w-[900px] max-w-[calc(100vw-3rem)] -translate-x-1/2 pt-3 group-hover:block group-hover:pointer-events-auto">
+            <div
+              class="grid gap-2 rounded-2xl border border-slate-100 bg-white p-4 shadow-[0_22px_70px_rgba(15,23,42,0.25)] md:grid-cols-3">
+              <!-- 1: Lackier- und Kartonfilter -->
+              <a href="/produkte/lackier-und-kartonfilter"
+                class="flex items-start gap-3 rounded-xl p-2 transition hover:bg-slate-50">
+                <div class="h-10 w-10 flex-shrink-0 overflow-hidden rounded-xl bg-black">
+                  <img src="images/products/filtega-prod-1.png" alt="Lackier- und Kartonfilter"
+                    class="h-full w-full object-cover" loading="lazy" />
+                </div>
+                <div class="space-y-0.5">
+                  <h4 class="text-[0.8rem] font-semibold text-slate-900">Lackier- und Kartonfilter</h4>
+                  <p class="text-[0.7rem] leading-snug text-slate-600">
+                    Kartonfilter, Glasfasermatten und Deckenfilter für Lackierkabinen mit optimierten Standzeiten.
+                  </p>
+                </div>
+              </a>
+
+              <!-- 2: Zu- und Abluft -->
+              <a href="/produkte/zuluft-und-abluftfilter"
+                class="flex items-start gap-3 rounded-xl p-2 transition hover:bg-slate-50">
+                <div class="h-10 w-10 flex-shrink-0 overflow-hidden rounded-xl bg-black">
+                  <img src="images/products/filtega-prod-2.png" alt="Filter für Zu- und Abluftanlagen"
+                    class="h-full w-full object-cover" loading="lazy" />
+                </div>
+                <div class="space-y-0.5">
+                  <h4 class="text-[0.8rem] font-semibold text-slate-900">Filter für Zu- und Abluftanlagen</h4>
+                  <p class="text-[0.7rem] leading-snug text-slate-600">
+                    Filtermatten, Rahmen-, Taschen- und Kompaktfilter für Klima- und Lüftungsanlagen.
+                  </p>
+                </div>
+              </a>
+
+              <!-- 3: Entstaubungsfilter -->
+              <a href="/produkte/entstaubungsfilter"
+                class="flex items-start gap-3 rounded-xl p-2 transition hover:bg-slate-50">
+                <div class="h-10 w-10 flex-shrink-0 overflow-hidden rounded-xl bg-black">
+                  <img src="images/products/filtega-prod-3.png" alt="Entstaubungsfilter"
+                    class="h-full w-full object-cover" loading="lazy" />
+                </div>
+                <div class="space-y-0.5">
+                  <h4 class="text-[0.8rem] font-semibold text-slate-900">Entstaubungsfilter</h4>
+                  <p class="text-[0.7rem] leading-snug text-slate-600">
+                    Filterpatronen, -schläuche und -taschen für Entstaubungsanlagen mit Spezialausrüstungen.
+                  </p>
+                </div>
+              </a>
+
+              <!-- 4: Nassfiltration -->
+              <a href="/produkte/nassfiltration"
+                class="flex items-start gap-3 rounded-xl p-2 transition hover:bg-slate-50">
+                <div class="h-10 w-10 flex-shrink-0 overflow-hidden rounded-xl bg-black">
+                  <img src="images/products/filtega-prod-4.png" alt="Nassfiltration" class="h-full w-full object-cover"
+                    loading="lazy" />
+                </div>
+                <div class="space-y-0.5">
+                  <h4 class="text-[0.8rem] font-semibold text-slate-900">Nassfiltration</h4>
+                  <p class="text-[0.7rem] leading-snug text-slate-600">
+                    Nassfiltervliese als Rollenware, Zuschnitt oder Beutel für Kühlschmierstoffe und Prozesswasser.
+                  </p>
+                </div>
+              </a>
+
+              <!-- 5: Kanalgehäuse & Rahmensysteme -->
+              <a href="/produkte/kanalgehaeuse-rahmensysteme"
+                class="flex items-start gap-3 rounded-xl p-2 transition hover:bg-slate-50">
+                <div class="h-10 w-10 flex-shrink-0 overflow-hidden rounded-xl bg-black">
+                  <img src="images/products/filtega-prod-5.png" alt="Kanalgehäuse & Rahmensysteme"
+                    class="h-full w-full object-cover" loading="lazy" />
+                </div>
+                <div class="space-y-0.5">
+                  <h4 class="text-[0.8rem] font-semibold text-slate-900">Kanalgehäuse &amp; Rahmensysteme</h4>
+                  <p class="text-[0.7rem] leading-snug text-slate-600">
+                    Gehäuse und Rahmen für Taschen-, Kompakt- und Schwebstofffilter, flexibel kombinierbar.
+                  </p>
+                </div>
+              </a>
+
+              <!-- 7: Nassfiltergeräte -->
+              <a href="/produkte/nassfiltergeraete"
+                class="flex items-start gap-3 rounded-xl p-2 transition hover:bg-slate-50">
+                <div class="h-10 w-10 flex-shrink-0 overflow-hidden rounded-xl bg-black">
+                  <img src="images/products/filtega-prod-7.png" alt="Nassfiltergeräte"
+                    class="h-full w-full object-cover" loading="lazy" />
+                </div>
+                <div class="space-y-0.5">
+                  <h4 class="text-[0.8rem] font-semibold text-slate-900">Nassfiltergeräte</h4>
+                  <p class="text-[0.7rem] leading-snug text-slate-600">
+                    Beutelfiltergeräte aus Edelstahl oder Kunststoff für Prozess- und Kreislaufmedien.
+                  </p>
+                </div>
+              </a>
+
+              <!-- 9: Zubehör -->
+              <a href="/produkte/zubehoer" class="flex items-start gap-3 rounded-xl p-2 transition hover:bg-slate-50">
+                <div class="h-10 w-10 flex-shrink-0 overflow-hidden rounded-xl bg-black">
+                  <img src="images/products/filtega-prod-9.png" alt="Zubehör" class="h-full w-full object-cover"
+                    loading="lazy" />
+                </div>
+                <div class="space-y-0.5">
+                  <h4 class="text-[0.8rem] font-semibold text-slate-900">Zubehör</h4>
+                  <p class="text-[0.7rem] leading-snug text-slate-600">
+                    Montage- und Dichtungskomponenten, Rahmen, Dichtungen und weiteres Zubehör.
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a href="index.html#welten"
+          class="rounded-full px-3 py-2 text-xs font-medium text-slate-800/80 transition hover:bg-slate-100 hover:text-slate-900">Einsatzbereiche</a>
+        <a href="index.html#katalog"
+          class="rounded-full px-3 py-2 text-xs font-medium text-slate-800/80 transition hover:bg-slate-100 hover:text-slate-900">Katalog</a>
+        <a href="index.html#ueber-uns"
+          class="rounded-full px-3 py-2 text-xs font-medium text-slate-800/80 transition hover:bg-slate-100 hover:text-slate-900">Über
+          uns</a>
+        <a href="#kontakt"
+          class="rounded-full px-3 py-2 text-xs font-medium text-slate-800/80 transition hover:bg-slate-100 hover:text-slate-900">Kontakt</a>
+        <a href="#kontakt"
+          class="rounded-full bg-brand-orange px-4 py-2 text-xs font-semibold text-white shadow-sm transition hover:bg-orange-600">Anfrage
+          senden</a>
+      </nav>
+
+      <!-- Mobile toggle -->
+      <button id="mobileToggle" class="block rounded-full p-2 outline-none ring-0 md:hidden">
+        <span class="sr-only">Menü öffnen</span>
+        <div class="flex h-4 w-5 flex-col justify-between">
+          <span class="h-[1.5px] w-full rounded bg-slate-900 transition"></span>
+          <span class="h-[1.5px] w-full rounded bg-slate-900 transition"></span>
+          <span class="h-[1.5px] w-full rounded bg-slate-900 transition"></span>
+        </div>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="hidden border-t border-slate-200 bg-white md:hidden">
+      <div class="mx-auto flex max-w-6xl flex-col gap-2 px-6 py-4 text-sm">
+        <a href="index.html#produkte" class="py-1.5">Produkte</a>
+        <div class="flex flex-col gap-1 pl-3 text-[0.8rem] text-slate-600">
+          <a href="/produkte/lackier-und-kartonfilter" class="py-0.5">Lackier- &amp; Kartonfilter</a>
+          <a href="/produkte/zuluft-und-abluftfilter" class="py-0.5">Zuluft- &amp; Abluftfilter</a>
+          <a href="/produkte/entstaubungsfilter" class="py-0.5">Entstaubungsfilter</a>
+          <a href="/produkte/nassfiltration" class="py-0.5">Nassfiltration</a>
+          <a href="/produkte/nassfiltergeraete" class="py-0.5">Nassfiltergeräte</a>
+          <a href="/produkte/zubehoer" class="py-0.5">Zubehör &amp; Systeme</a>
+        </div>
+        <a href="index.html#welten" class="py-1.5">Einsatzbereiche</a>
+        <a href="index.html#katalog" class="py-1.5">Katalog</a>
+        <a href="index.html#ueber-uns" class="py-1.5">Über uns</a>
+        <a href="#kontakt" class="py-1.5">Kontakt</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO (fixed: visible CTAs, better layout, right image 1:1) -->
+    <section class="relative px-6 pt-28 pb-16">
+      <div
+        class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(236,237,248,1)_0%,rgba(255,255,255,1)_55%)]">
+      </div>
+
+      <div class="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-2">
+        <div>
+          <div class="mb-5 flex flex-wrap items-center gap-2 text-[0.8rem] text-slate-600">
+            <a href="/"
+              class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/80 px-3 py-1 backdrop-blur transition hover:bg-white">
+              <i class="fa-solid fa-house text-[0.7rem]"></i> Start
+            </a>
+            <span class="text-slate-300">/</span>
+            <span
+              class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/80 px-3 py-1 backdrop-blur">
+              <i class="fa-solid fa-spray-can-sparkles text-[0.75rem] text-brand-orange"></i>
+              Lackier- &amp; Kartonfilter
+            </span>
+          </div>
+
+          <p
+            class="js-animate mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-brand-orange opacity-0 translate-y-10 transition duration-700">
+            Produktkategorie</p>
+          <h1
+            class="js-animate text-4xl font-bold leading-tight tracking-tight text-slate-900 sm:text-5xl opacity-0 translate-y-10 transition duration-700 delay-100">
+            Lackier- &amp; Kartonfilter
+          </h1>
+
+          <p
+            class="js-animate mt-4 max-w-xl text-[1.05rem] leading-relaxed text-slate-600 opacity-0 translate-y-10 transition duration-700 delay-200">
+            Kartonfilter, Glasfasermatten und Deckenfilter für Lackierkabinen. Hohe Staubspeicherfähigkeit, optimierte
+            Standzeiten
+            und weniger Entsorgung.
+          </p>
+
+          <div class="js-animate mt-6 flex flex-wrap gap-2 opacity-0 translate-y-10 transition duration-700 delay-300">
+            <span
+              class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1 text-[0.8rem] text-slate-700 shadow-sm">
+              <span class="h-1.5 w-1.5 rounded-full bg-brand-orange"></span>
+              Bis zu 75&nbsp;% Ersparnis*
+            </span>
+            <span
+              class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1 text-[0.8rem] text-slate-700 shadow-sm">
+              <i class="fa-solid fa-hourglass-half text-[0.8rem] text-brand-orange"></i>
+              Längere Standzeiten
+            </span>
+            <span
+              class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1 text-[0.8rem] text-slate-700 shadow-sm">
+              <i class="fa-solid fa-recycle text-[0.8rem] text-brand-orange"></i>
+              Weniger Entsorgung
+            </span>
+            <span
+              class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1 text-[0.8rem] text-slate-700 shadow-sm">
+              <i class="fa-solid fa-shield-halved text-[0.8rem] text-brand-orange"></i>
+              Schutz der Ablufttechnik
+            </span>
+          </div>
+
+          <div class="js-animate mt-8 flex flex-wrap gap-3 opacity-0 translate-y-10 transition duration-700 delay-500">
+            <a href="#produkte"
+              class="inline-flex items-center gap-2 rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800">
+              Produkte ansehen <span class="text-xs opacity-80">→</span>
+            </a>
+            <a href="#kontakt"
+              class="inline-flex items-center gap-2 rounded-full bg-brand-orange px-6 py-3 text-sm font-semibold text-white shadow-[0_18px_40px_rgba(233,131,34,0.35)] transition hover:bg-orange-600">
+              Jetzt beraten lassen <span class="text-xs opacity-90">→</span>
+            </a>
+          </div>
+
+          <p class="mt-4 text-[0.75rem] text-slate-500">
+            *Werte abhängig von Anlage, Lacktyp und Auslegung.
+          </p>
+        </div>
+
+        <div class="js-animate relative opacity-0 translate-y-10 transition duration-700 delay-700">
+          <div
+            class="overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-[0_30px_90px_rgba(15,23,42,0.12)]">
+            <div class="aspect-square w-full overflow-hidden bg-slate-100">
+              <img src="images/products/filtega-prod-1.png" alt="Lackier- und Kartonfilter"
+                class="h-full w-full object-cover" loading="lazy" />
+            </div>
+            <div class="p-6">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <h3 class="mt-1 text-lg font-semibold text-slate-900">Warum Kartonfilter?</h3>
+                  <p class="mt-2 text-[0.95rem] leading-relaxed text-slate-600">
+                    Der Luftstromweg bleibt frei, obwohl sich der Filter mit Farbe füllt. Verstopfung erst bei
+                    vollständig gefüllten Absatzkammern.
+                  </p>
+                </div>
+                <span
+                  class="hidden rounded-2xl bg-slate-900 px-3 py-2 text-[0.75rem] font-semibold text-white sm:inline-flex">
+                  Premium
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS (fixed: 1:1 images, order buttons, PDF icons) -->
+    <section id="produkte" class="px-6 pb-20">
+      <div class="mx-auto max-w-6xl">
+        <div
+          class="js-animate mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between opacity-0 translate-y-10 transition duration-700">
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.16em] text-brand-orange">Produkte in dieser Kategorie
+            </p>
+            <h2 class="mt-2 text-3xl font-bold tracking-tight text-slate-900">
+              Kartonfilter, Paint-Stop &amp; Dust-Stop
+            </h2>
+            <p class="mt-2 max-w-2xl text-[1rem] leading-relaxed text-slate-600">
+              Für Overspray-Abscheidung, Schutz der Ablufttechnik und wirtschaftliche Standzeiten.
+            </p>
+          </div>
+
+          <a href="#kontakt"
+            class="inline-flex items-center gap-2 self-start rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-900 shadow-sm transition hover:bg-slate-50 sm:self-auto">
+            Angebot anfragen
+            <span class="text-brand-orange transition-transform duration-150 hover:translate-x-1">→</span>
+          </a>
+        </div>
+
+        <div class="flex flex-col gap-6">
+          <!-- Kartonfilter -->
+          <article
+            class="js-animate group flex flex-col md:flex-row-reverse overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-[0_18px_50px_rgba(15,23,42,0.08)] transition hover:shadow-[0_26px_70px_rgba(15,23,42,0.12)] opacity-0 translate-y-10 duration-700 delay-100">
+            <!-- Image Side -->
+            <div class="relative w-full aspect-square shrink-0 overflow-hidden bg-slate-100 md:w-1/3 lg:w-[360px]">
+              <div class="absolute inset-0 bg-slate-900/0 transition group-hover:bg-slate-900/[0.02]"></div>
+              <img src="images/products/filtega-prod-1.png" alt="Kartonfilter"
+                class="h-full w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" />
+              <div
+                class="absolute left-4 top-4 inline-flex items-center gap-2 rounded-full bg-white/90 px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-slate-900 shadow-sm backdrop-blur">
+                <i class="fa-solid fa-bolt text-brand-orange"></i>
+                Bis zu 75&nbsp;% sparen*
+              </div>
+            </div>
+
+            <!-- Content Side -->
+            <div class="flex flex-1 flex-col p-6 sm:p-10">
+              <div class="mb-4">
+                <h3 class="text-2xl font-bold tracking-tight text-slate-900">Kartonfilter</h3>
+                <p class="text-sm font-medium text-brand-orange">Der Standard für effiziente Lackierung</p>
+              </div>
+
+              <div class="prose prose-slate prose-sm max-w-none text-slate-600 leading-relaxed mb-8">
+                <p>
+                  Bei unseren Kartonfiltern (auch bekannt als Sepa-Paint oder Andreae-Filter) handelt es sich um ein
+                  bahnbrechendes Produkt, welches sich erst kurze Zeit auf dem deutschen Markt befindet. Dank seines
+                  neuen
+                  Filterprinzips bleibt im Filter der Weg für den Luftstrom bei der Anwendung frei, obwohl sich der
+                  Filter
+                  mit Farbe füllt.
+                </p>
+                <p>
+                  Diese Filter sind erst dann verstopft, wenn die Absatzkammern völlig mit Farbe gefüllt
+                  sind. Kartonfilter verfügen gegenüber herkömmlichen Lackfiltern über eine enorme
+                  Staubspeicherfähigkeit.
+                  Dadurch ist es möglich die Kosten an Ihrer Lackieranlage um bis zu <strong>75% zu senken</strong>.
+                  Darüber hinaus können
+                  wir Ihnen natürlich auch herkömmliche Paint-stop-Filtermatten anbieten.
+                </p>
+              </div>
+
+              <!-- Action Footer -->
+              <div
+                class="mt-auto flex flex-col gap-6 border-t border-slate-100 pt-6 sm:flex-row sm:items-center sm:justify-between">
+                <!-- Documents -->
+                <div class="flex flex-col gap-2">
+                  <span class="text-[0.65rem] font-bold uppercase tracking-widest text-slate-400">Dokumente</span>
+                  <div class="flex flex-wrap gap-4">
+                    <button type="button" onclick="openModal('tpl-kartonfilter')"
+                      class="group/link flex items-center gap-2 text-sm font-medium text-slate-600 transition hover:text-brand-orange">
+                      <i
+                        class="fa-solid fa-ruler-combined text-slate-400 transition group-hover/link:text-brand-orange"></i>
+                      <span>Standardabmessungen</span>
+                    </button>
+                    <a href="http://filtega.de//pdf/Kartonfilter_Umbauanleitun.pdf" target="_blank"
+                      class="group/link flex items-center gap-2 text-sm font-medium text-slate-600 transition hover:text-brand-orange">
+                      <i class="fa-solid fa-file-pdf text-slate-400 transition group-hover/link:text-brand-orange"></i>
+                      <span>Beschreibung Kartonfilter und Umbauanleitung einer bestehenden Lackieranlage</span>
+                      <!-- </a>
+                    <a href="#"
+                      class="group/link flex items-center gap-2 text-sm font-medium text-slate-600 transition hover:text-brand-orange">
+                      <i
+                        class="fa-solid fa-circle-play text-slate-400 transition group-hover/link:text-brand-orange"></i>
+                      <span>Video-Anleitung</span>
+                    </a> -->
+                  </div>
+                </div>
+
+                <!-- CTA -->
+                <div class="flex-shrink-0">
+                  <a href="#kontakt"
+                    class="inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-orange px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-orange-500/20 transition hover:bg-orange-600 hover:-translate-y-0.5 sm:w-auto">
+                    Jetzt anfragen
+                    <i class="fa-solid fa-arrow-right text-xs opacity-70"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Paint Stop -->
+          <article
+            class="js-animate group flex flex-col md:flex-row-reverse overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-[0_18px_50px_rgba(15,23,42,0.08)] transition hover:shadow-[0_26px_70px_rgba(15,23,42,0.12)] opacity-0 translate-y-10 duration-700 delay-200">
+            <!-- Image Side -->
+            <div class="relative w-full aspect-square shrink-0 overflow-hidden bg-slate-100 md:w-1/3 lg:w-[360px]">
+              <div class="absolute inset-0 bg-slate-900/0 transition group-hover:bg-slate-900/[0.02]"></div>
+              <img src="images/products/filtega-prod-1.png" alt="Paint Stop – Grün"
+                class="h-full w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" />
+              <div
+                class="absolute left-4 top-4 inline-flex items-center gap-2 rounded-full bg-white/90 px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-slate-900 shadow-sm backdrop-blur">
+                <i class="fa-solid fa-shield-halved text-brand-orange"></i>
+                Anlagenschutz
+              </div>
+            </div>
+
+            <!-- Content Side -->
+            <div class="flex flex-1 flex-col p-6 sm:p-10">
+              <div class="mb-4">
+                <h3 class="text-2xl font-bold tracking-tight text-slate-900">Paint Stop – Grün</h3>
+                <p class="text-sm font-medium text-brand-orange">Der Klassiker für Lackieranlagen</p>
+              </div>
+
+              <div class="prose prose-slate prose-sm max-w-none text-slate-600 leading-relaxed mb-8">
+                <p>
+                  Paint Stop-Matten scheiden die Farbnebelabluft zuverlässig ab. Dadurch werden die Abluftkanäle,
+                  Ventilatoren und
+                  Motoren vor gefährlichen Farbablagerungen geschützt. Dies erhöht nicht nur die Lebensdauer, sondern
+                  senkt auch Brandrisiken.
+                </p>
+                <p>
+                  Sie finden primär Anwendung in Lackieranlagen und Farbspritzständen der
+                  Automobilindustrie sowie in holz- und metallverarbeitenden Betrieben.
+                  Verfügbar als Rollenware oder Zuschnitt.
+                </p>
+              </div>
+
+              <!-- Action Footer -->
+              <div
+                class="mt-auto flex flex-col gap-6 border-t border-slate-100 pt-6 sm:flex-row sm:items-center sm:justify-between">
+                <!-- Documents -->
+                <div class="flex flex-col gap-2">
+                  <span class="text-[0.65rem] font-bold uppercase tracking-widest text-slate-400">Dokumente</span>
+                  <div class="flex flex-wrap gap-4">
+                    <button type="button" onclick="openModal('tpl-filtermatten')"
+                      class="group/link flex items-center gap-2 text-sm font-medium text-slate-600 transition hover:text-brand-orange">
+                      <i
+                        class="fa-solid fa-ruler-combined text-slate-400 transition group-hover/link:text-brand-orange"></i>
+                      <span>Standardabmessungen</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- CTA -->
+                <div class="flex-shrink-0">
+                  <a href="#kontakt"
+                    class="inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-orange px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-orange-500/20 transition hover:bg-orange-600 hover:-translate-y-0.5 sm:w-auto">
+                    Jetzt anfragen
+                    <i class="fa-solid fa-arrow-right text-xs opacity-70"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Dust Stop -->
+          <article
+            class="js-animate group flex flex-col md:flex-row-reverse overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-[0_18px_50px_rgba(15,23,42,0.08)] transition hover:shadow-[0_26px_70px_rgba(15,23,42,0.12)] opacity-0 translate-y-10 duration-700 delay-300">
+            <!-- Image Side -->
+            <div class="relative w-full aspect-square shrink-0 overflow-hidden bg-slate-100 md:w-1/3 lg:w-[360px]">
+              <div class="absolute inset-0 bg-slate-900/0 transition group-hover:bg-slate-900/[0.02]"></div>
+              <img src="images/products/filtega-prod-1.png" alt="Dust Stop – Gelb"
+                class="h-full w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" />
+              <div
+                class="absolute left-4 top-4 inline-flex items-center gap-2 rounded-full bg-white/90 px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-slate-900 shadow-sm backdrop-blur">
+                <i class="fa-solid fa-bacteria text-brand-orange"></i>
+                Staubbindend
+              </div>
+            </div>
+
+            <!-- Content Side -->
+            <div class="flex flex-1 flex-col p-6 sm:p-10">
+              <div class="mb-4">
+                <h3 class="text-2xl font-bold tracking-tight text-slate-900">Dust Stop – Gelb</h3>
+                <p class="text-sm font-medium text-brand-orange">Spezialfilter für trockene Stäube</p>
+              </div>
+
+              <div class="prose prose-slate prose-sm max-w-none text-slate-600 leading-relaxed mb-8">
+                <p>
+                  Dust Stop-Matten sind den Paintstop-Filtermatten ähnlich, jedoch zusätzlich mit einem
+                  <strong>antibakteriellen Staubbindemittel</strong> ausgerüstet. Dies verhindert das Durchwandern von
+                  Feinstäuben.
+                </p>
+                <p>
+                  Sie werden speziell zur Abscheidung trockener Stäube eingesetzt und finden Anwendung
+                  in der Automobilindustrie, Produktion und Verarbeitung. Ideal als Vorfilter.
+                </p>
+              </div>
+
+              <!-- Action Footer -->
+              <div
+                class="mt-auto flex flex-col gap-6 border-t border-slate-100 pt-6 sm:flex-row sm:items-center sm:justify-between">
+                <!-- Documents -->
+                <div class="flex flex-col gap-2">
+                  <span class="text-[0.65rem] font-bold uppercase tracking-widest text-slate-400">Dokumente</span>
+                  <div class="flex flex-wrap gap-4">
+                    <button type="button" onclick="openModal('tpl-filtermatten')"
+                      class="group/link flex items-center gap-2 text-sm font-medium text-slate-600 transition hover:text-brand-orange">
+                      <i
+                        class="fa-solid fa-ruler-combined text-slate-400 transition group-hover/link:text-brand-orange"></i>
+                      <span>Standardabmessungen</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- CTA -->
+                <div class="flex-shrink-0">
+                  <a href="#kontakt"
+                    class="inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-orange px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-orange-500/20 transition hover:bg-orange-600 hover:-translate-y-0.5 sm:w-auto">
+                    Jetzt anfragen
+                    <i class="fa-solid fa-arrow-right text-xs opacity-70"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="mt-10 rounded-3xl border border-slate-100 bg-slate-50 p-6 text-[0.9rem] text-slate-600">
+          <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+            <p><span class="font-semibold text-slate-900">Hinweis:</span> Standardabmessungen &amp; Sonderlösungen auf
+              Anfrage. Wir denken in Anwendungen, nicht in Katalognummern.</p>
+            <a href="#kontakt"
+              class="inline-flex items-center gap-2 self-start rounded-full bg-white px-4 py-2 text-sm font-semibold text-slate-900 shadow-sm transition hover:bg-slate-100 sm:self-auto">
+              Beratung starten
+              <span class="text-brand-orange transition-transform duration-150 hover:translate-x-1">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNOLOGIE & PRINZIP -->
+    <section class="bg-white px-6 pb-24 pt-10">
+      <div class="mx-auto max-w-6xl">
+        <div class="js-animate mb-16 max-w-2xl opacity-0 translate-y-10 transition duration-700">
+          <p class="text-xs font-semibold uppercase tracking-[0.16em] text-brand-orange">Technologie</p>
+          <h2 class="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+            Prinzip der Fliehkraftabscheidung
+          </h2>
+          <p class="mt-4 text-lg leading-relaxed text-slate-600">
+            Effiziente Farbnebelabscheidung durch Physik statt Verstopfung. So funktionieren Kartonfilter im Detail.
+          </p>
+        </div>
+
+        <div class="grid gap-8 lg:grid-cols-2 lg:gap-16">
+          <!-- Left Column: The Process -->
+          <div class="js-animate flex flex-col gap-8 opacity-0 translate-y-10 transition duration-700 delay-100">
+            <div class="rounded-3xl border border-slate-100 bg-slate-50 p-8 shadow-sm">
+              <h3 class="flex items-center gap-3 text-lg font-bold text-slate-900">
+                <i class="fa-solid fa-wind text-brand-orange"></i>
+                Die Funktionsweise
+              </h3>
+              <div class="mt-6 space-y-6">
+                <div class="relative pl-6 border-l-2 border-slate-200">
+                  <p class="mb-1 text-xs font-bold uppercase tracking-wider text-slate-400">Das Problem</p>
+                  <p class="text-[0.95rem] leading-relaxed text-slate-600">
+                    Filtern heißt nicht zwangsläufig, bewegliche Farbpartikel nur durch immer feinere Matten
+                    aufzufangen.
+                  </p>
+                </div>
+                <div class="relative pl-6 border-l-2 border-brand-orange">
+                  <p class="mb-1 text-xs font-bold uppercase tracking-wider text-brand-orange">Der Prozess</p>
+                  <p class="text-[0.95rem] font-medium leading-relaxed text-slate-900">
+                    Beim Durchgang durch den Filter wird der Luftstrom mehrfach zu <strong>starken
+                      Richtungsänderungen</strong> gezwungen.
+                  </p>
+                </div>
+                <div class="relative pl-6 border-l-2 border-slate-200">
+                  <p class="mb-1 text-xs font-bold uppercase tracking-wider text-slate-400">Das Ergebnis</p>
+                  <p class="text-[0.95rem] leading-relaxed text-slate-600">
+                    Durch die Trägheit werden die schwereren Farbpartikel aus dem Luftstrom <strong>ausgestoßen</strong>
+                    und sammeln sich in den Absetzkammern, während die Luft weiter strömt.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Comparison / Curve Text -->
+            <div class="rounded-3xl bg-slate-900 p-8 text-white shadow-lg">
+              <h4 class="flex items-center gap-2 mb-3 text-sm font-bold uppercase tracking-wider text-brand-orange">
+                <i class="fa-solid fa-chart-line"></i>
+                Performance-Vergleich
+              </h4>
+              <p class="text-[0.95rem] leading-relaxed text-slate-300">
+                Im Vergleich zu Filtermatten verläuft die Sättigungskurve beim Kartonfilter <strong>viel flacher und
+                  länger</strong>.
+              </p>
+              <hr class="my-4 border-white/10" />
+              <div class="flex items-start gap-4">
+                <div class="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white/10">
+                  <i class="fa-solid fa-arrow-up-right-dots text-xs text-brand-orange"></i>
+                </div>
+                <div>
+                  <p class="font-medium text-white">Konstanter Luftstrom</p>
+                  <p class="mt-1 text-xs text-slate-400 leading-normal">
+                    Gleichbleibender Strömungswiderstand während der gesamten Farbnebelaufnahme, bis die Kammern
+                    vollständig gefüllt sind.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Advantages List -->
+          <div
+            class="js-animate flex flex-col justify-center opacity-0 translate-y-10 transition duration-700 delay-300">
+            <h3 class="mb-8 text-xl font-bold text-slate-900">Die entscheidenden Vorteile</h3>
+
+            <div class="space-y-4">
+              <!-- Item 1 -->
+              <div
+                class="group relative rounded-2xl border border-slate-100 bg-white p-6 shadow-sm transition hover:border-brand-orange/30 hover:shadow-md">
+                <div class="flex items-start gap-4">
+                  <div
+                    class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-orange-50 text-brand-orange transition group-hover:bg-brand-orange group-hover:text-white">
+                    <span class="font-bold">1</span>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-slate-900">Keine Wanderung</h4>
+                    <p class="mt-2 text-sm leading-relaxed text-slate-600">
+                      Sobald sich Farbpartikel in der Absetzkammer festgesetzt haben, befinden sie sich in einer
+                      <span class="font-medium text-slate-900">"Sackgasse" außerhalb des Luftstroms</span>. Eine
+                      nachträgliche Migration durch den Filter ist physikalisch unmöglich.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 2 -->
+              <div
+                class="group relative rounded-2xl border border-slate-100 bg-white p-6 shadow-sm transition hover:border-brand-orange/30 hover:shadow-md">
+                <div class="flex items-start gap-4">
+                  <div
+                    class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-orange-50 text-brand-orange transition group-hover:bg-brand-orange group-hover:text-white">
+                    <span class="font-bold">2</span>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-slate-900">Hohe Farbspeicherfähigkeit</h4>
+                    <p class="mt-2 text-sm leading-relaxed text-slate-600">
+                      Der Luftstromweg bleibt frei, auch wenn sich der Filter füllt. Er verstopft erst, wenn die Kammern
+                      <strong>völlig gefüllt</strong> sind. Herkömmliche Matten setzen sich oberflächlich zu und
+                      blockieren den Strom viel früher.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 3 -->
+              <div
+                class="group relative rounded-2xl border border-slate-100 bg-white p-6 shadow-sm transition hover:border-brand-orange/30 hover:shadow-md">
+                <div class="flex items-start gap-4">
+                  <div
+                    class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-orange-50 text-brand-orange transition group-hover:bg-brand-orange group-hover:text-white">
+                    <span class="font-bold">3</span>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-slate-900">Gleichmäßiger Luftstrom</h4>
+                    <p class="mt-2 text-sm leading-relaxed text-slate-600">
+                      Die Kabinenbalance bleibt erhalten. Kein ständiges Nachregeln der Abluftleistung nötig, da der
+                      Widerstand stabil bleibt.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="kontakt" class="bg-slate-50 px-6 py-24">
+      <div class="mx-auto max-w-4xl text-center">
+        <h2
+          class="js-animate mb-4 text-3xl font-semibold tracking-tight text-slate-900 sm:text-[2.1rem] opacity-0 translate-y-10 transition duration-700">
+          Kontaktieren Sie uns.
+        </h2>
+        <p
+          class="js-animate mx-auto max-w-xl text-[0.96rem] leading-relaxed text-slate-600 opacity-0 translate-y-10 transition duration-700 delay-100">
+          Wir melden uns innerhalb eines Werktages mit Rückfragen oder einem konkreten Vorschlag.
+        </p>
+      </div>
+
+      <!-- 2-column layout -->
+      <div class="mx-auto mt-10 grid max-w-5xl gap-8 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
+        <!-- LEFT: Kontaktinfos stacked -->
+        <div class="space-y-4">
+          <div
+            class="js-animate rounded-3xl bg-white px-6 py-7 text-left shadow-sm opacity-0 translate-y-10 transition duration-700">
+            <div class="mb-3 flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-50 text-lg text-slate-900">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <h3 class="mb-1 text-sm font-semibold text-slate-900">Telefon</h3>
+            <p class="mb-2 text-[0.8rem] text-slate-600">Mo – Fr: 8:00 – 17:00 Uhr</p>
+            <a href="tel:+4912345678" class="text-sm font-semibold text-brand-orange hover:underline">+49 (0) 123 456
+              78</a>
+          </div>
+
+          <div
+            class="js-animate rounded-3xl bg-white px-6 py-7 text-left shadow-sm opacity-0 translate-y-10 transition duration-700 delay-75">
+            <div class="mb-3 flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-50 text-lg text-slate-900">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <h3 class="mb-1 text-sm font-semibold text-slate-900">E-Mail</h3>
+            <p class="mb-2 text-[0.8rem] text-slate-600">Antwort in der Regel innerhalb von 24 Stunden</p>
+            <a href="mailto:info@filtega.de"
+              class="text-sm font-semibold text-brand-orange hover:underline">info@filtega.de</a>
+          </div>
+
+          <div
+            class="js-animate rounded-3xl bg-white px-6 py-7 text-left shadow-sm opacity-0 translate-y-10 transition duration-700 delay-150">
+            <div class="mb-3 flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-50 text-lg text-slate-900">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <h3 class="mb-1 text-sm font-semibold text-slate-900">Adresse</h3>
+            <p class="mb-2 text-[0.8rem] text-slate-600">Besuchen Sie uns vor Ort nach Terminvereinbarung</p>
+            <a href="#" class="text-sm font-semibold text-brand-orange hover:underline">Musterstraße 123, 12345
+              Stadt</a>
+          </div>
+        </div>
+
+        <!-- RIGHT: Form -->
+        <div
+          class="js-animate rounded-3xl bg-white px-6 py-8 shadow-sm opacity-0 translate-y-10 transition duration-700 delay-200">
+          <h3 class="mb-4 text-lg font-semibold text-slate-900">Kurzformular für Ihre Anfrage</h3>
+          <p class="mb-6 text-[0.9rem] text-slate-600">
+            Beschreiben Sie kurz Ihre Anwendung – wir melden uns mit Rückfragen oder einem konkreten Vorschlag.
+          </p>
+          <form action="/kontakt" method="post" class="space-y-4">
+            <div class="grid gap-4 md:grid-cols-2">
+              <div class="text-left">
+                <label for="name" class="mb-1 block text-[0.8rem] font-medium text-slate-700">Name*</label>
+                <input id="name" name="name" required type="text"
+                  class="w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-900 outline-none transition focus:border-brand-orange focus:bg-white focus:ring-1 focus:ring-brand-orange" />
+              </div>
+              <div class="text-left">
+                <label for="company" class="mb-1 block text-[0.8rem] font-medium text-slate-700">Firma</label>
+                <input id="company" name="company" type="text"
+                  class="w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-900 outline-none transition focus:border-brand-orange focus:bg-white focus:ring-1 focus:ring-brand-orange" />
+              </div>
+            </div>
+            <div class="grid gap-4 md:grid-cols-2">
+              <div class="text-left">
+                <label for="email" class="mb-1 block text-[0.8rem] font-medium text-slate-700">E-Mail*</label>
+                <input id="email" name="email" required type="email"
+                  class="w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-900 outline-none transition focus:border-brand-orange focus:bg-white focus:ring-1 focus:ring-brand-orange" />
+              </div>
+              <div class="text-left">
+                <label for="phone" class="mb-1 block text-[0.8rem] font-medium text-slate-700">Telefon
+                  (optional)</label>
+                <input id="phone" name="phone" type="tel"
+                  class="w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-900 outline-none transition focus:border-brand-orange focus:bg-white focus:ring-1 focus:ring-brand-orange" />
+              </div>
+            </div>
+            <div class="text-left">
+              <label for="application" class="mb-1 block text-[0.8rem] font-medium text-slate-700">Anlage /
+                Anwendung*</label>
+              <select id="application" name="application" required
+                class="w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-900 outline-none transition focus:border-brand-orange focus:bg-white focus:ring-1 focus:ring-brand-orange">
+                <option value="">Bitte auswählen</option>
+                <option value="klima">Klima- / Lüftungsanlage</option>
+                <option value="lack">Lackieranlage / Spritzkabine</option>
+                <option value="entstaubung">Entstaubungsanlage</option>
+                <option value="nassfiltration">Nassfiltration / Kühlschmierstoffe</option>
+                <option value="sonstiges">Sonstige Anwendung</option>
+              </select>
+            </div>
+            <div class="text-left">
+              <label for="message" class="mb-1 block text-[0.8rem] font-medium text-slate-700">Nachricht*</label>
+              <textarea id="message" name="message" rows="4" required
+                class="w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-900 outline-none transition focus:border-brand-orange focus:bg-white focus:ring-1 focus:ring-brand-orange"
+                placeholder="Kurzbeschreibung Ihrer Anlage, Filtertypen, Wechselintervall …"></textarea>
+            </div>
+            <div class="flex items-start gap-2 text-left">
+              <div class="text-left">
+                <label for="privacy" class="flex cursor-pointer items-start gap-2">
+                  <input id="privacy" name="privacy" type="checkbox" required checked class="sr-only privacy-input" />
+
+                  <span class="privacy-box mt-[2px]"></span>
+
+                  <span class="text-[0.75rem] leading-snug text-slate-600">
+                    Ich stimme zu, dass meine Angaben zur Kontaktaufnahme und Zuordnung für eventuelle Rückfragen
+                    gespeichert werden.
+                    Weitere Informationen in der Datenschutzerklärung.
+                  </span>
+                </label>
+              </div>
+            </div>
+            <div class="pt-2">
+              <button type="submit"
+                class="inline-flex items-center gap-2 rounded-full bg-brand-orange px-6 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-orange-600">
+                Anfrage senden
+                <i class="fa-solid fa-paper-plane text-[0.7rem]"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-slate-900 px-6 py-10 text-slate-400">
+      <div class="mx-auto max-w-5xl border-b border-white/10 pb-7">
+        <div class="grid gap-10 md:grid-cols-[2fr_repeat(3,minmax(0,1fr))]">
+          <div>
+            <a href="index.html"
+              class="mb-3 inline-flex items-center gap-2 text-lg font-semibold tracking-tight text-white">
+              <img src="images/logo-s-l.svg" alt="Filtega" class="h-3 w-auto object-contain" />
+            </a>
+            <p class="max-w-xs text-[0.8rem] leading-relaxed text-slate-400">
+              Ihr Partner für Filtertechnik in Klima-, Lüftungs- und Lackieranlagen, Entstaubung und Nassfiltration –
+              mit Fokus auf Wirtschaftlichkeit und Qualität.
+            </p>
+          </div>
+          <div>
+            <h4 class="mb-3 text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-slate-300">
+              Navigation
+            </h4>
+            <ul class="space-y-2 text-[0.8rem]">
+              <li><a href="index.html" class="hover:text-slate-100">Startseite</a></li>
+              <li><a href="index.html#produkte" class="hover:text-slate-100">Produkte</a></li>
+              <li><a href="index.html#welten" class="hover:text-slate-100">Einsatzbereiche</a></li>
+              <li><a href="#kontakt" class="hover:text-slate-100">Kontakt</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="mb-3 text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-slate-300">
+              Produkte
+            </h4>
+            <ul class="space-y-2 text-[0.8rem]">
+              <li><a href="/produkte/lackier-und-kartonfilter" class="hover:text-slate-100">Lackierfilter</a></li>
+              <li><a href="/produkte/entstaubungsfilter" class="hover:text-slate-100">Entstaubungsfilter</a></li>
+              <li><a href="/produkte/nassfiltration" class="hover:text-slate-100">Nassfiltration</a></li>
+              <li><a href="/produkte/zuluft-und-abluftfilter" class="hover:text-slate-100">Zuluft &amp; Abluft</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="mb-3 text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-slate-300">
+              Service
+            </h4>
+            <ul class="space-y-2 text-[0.8rem]">
+              <li><a href="#kontakt" class="hover:text-slate-100">Beratung</a></li>
+              <li><a href="index.html#katalog" class="hover:text-slate-100">Katalog</a></li>
+              <li><a href="#" class="hover:text-slate-100">Montage (auf Anfrage)</a></li>
+              <li><a href="#" class="hover:text-slate-100">Wartung &amp; Versorgungskonzepte</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="mx-auto mt-4 flex max-w-5xl flex-wrap items-center justify-between gap-3 text-[0.7rem]">
+        <p>© 2025 Filtega. Alle Rechte vorbehalten.</p>
+        <div class="flex flex-wrap gap-4">
+          <a href="#" class="hover:text-slate-100">Impressum</a>
+          <a href="#" class="hover:text-slate-100">Datenschutz</a>
+          <a href="index.html" class="hover:text-slate-100">Nach oben</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // Mobile nav
+    const mobileToggle = document.getElementById('mobileToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (mobileToggle && mobileMenu) {
+      mobileToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+      });
+    }
+
+    // Scroll animations
+    const animated = document.querySelectorAll('.js-animate');
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.remove('opacity-0', 'translate-y-10');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.14, rootMargin: '0px 0px -60px 0px' }
+    );
+    animated.forEach((el) => observer.observe(el));
+  </script>
+
+
+  <script>
+    function openModal(templateId) {
+      const modal = document.getElementById('dynamicModal');
+      const backdrop = document.getElementById('modalBackdrop');
+      const panel = document.getElementById('modalPanel');
+      const contentContainer = document.getElementById('modalContent');
+      const template = document.getElementById(templateId);
+
+      if (!template) {
+        console.error(`Template with ID "${templateId}" not found`);
+        return;
+      }
+
+      // Clear existing content
+      contentContainer.innerHTML = '';
+
+      // Clone and append new content
+      const clone = template.content.cloneNode(true);
+      contentContainer.appendChild(clone);
+
+      // Show modal
+      modal.classList.remove('hidden');
+      // Force reflow
+      void modal.offsetWidth;
+
+      backdrop.classList.remove('opacity-0');
+      panel.classList.remove('translate-x-full');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('dynamicModal');
+      const backdrop = document.getElementById('modalBackdrop');
+      const panel = document.getElementById('modalPanel');
+
+      backdrop.classList.add('opacity-0');
+      panel.classList.add('translate-x-full');
+
+      setTimeout(() => {
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }, 500);
+    }
+
+    // Close on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !document.getElementById('dynamicModal').classList.contains('hidden')) {
+        closeModal();
+      }
+    });
+  </script>
+
+  <!-- Dynamic Side Modal -->
+  <div id="dynamicModal" class="fixed inset-0 z-[60] hidden" aria-labelledby="modal-title" role="dialog"
+    aria-modal="true">
+    <!-- Backdrop -->
+    <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity duration-500 opacity-0"
+      id="modalBackdrop" onclick="closeModal()"></div>
+
+    <!-- Slide-out Panel -->
+    <div class="absolute inset-y-0 right-0 flex max-w-full pl-0 sm:pl-10 pointer-events-none">
+      <div
+        class="pointer-events-auto relative w-screen max-w-2xl transform transition-transform duration-500 translate-x-full"
+        id="modalPanel">
+        <div class="flex h-full flex-col bg-white shadow-2xl">
+          <!-- Header -->
+          <div class="flex items-center justify-between border-b border-slate-100 px-6 py-4 sm:px-8">
+            <h2 class="text-xl font-bold text-slate-900" id="modal-title">Standardabmessungen</h2>
+            <button type="button"
+              class="rounded-full p-2 text-slate-400 transition hover:bg-slate-100 hover:text-slate-600"
+              onclick="closeModal()">
+              <span class="sr-only">Schließen</span>
+              <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+          </div>
+
+          <!-- Dynamic Content Container -->
+          <div id="modalContent" class="flex-1 overflow-y-auto px-6 py-6 sm:px-8 space-y-10">
+            <!-- Content will be injected here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <template id="tpl-filtermatten">
+    <!-- 1. Grobstaubfilter -->
+    <section>
+      <div class="flex items-center gap-3 mb-4">
+        <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-orange-50 text-brand-orange">
+          <i class="fa-solid fa-layer-group text-sm"></i>
+        </span>
+        <h3 class="text-lg font-bold text-slate-900">Grobstaubfilter</h3>
+      </div>
+      <div class="overflow-hidden rounded-xl border border-slate-200">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-sm text-slate-600">
+            <thead class="bg-slate-50 text-xs uppercase text-slate-500 border-b border-slate-200">
+              <tr>
+                <th class="px-4 py-3 font-semibold">Typ</th>
+                <th class="px-4 py-3 font-semibold">Klasse</th>
+                <th class="px-4 py-3 font-semibold whitespace-nowrap">Dicke (mm)</th>
+                <th class="px-4 py-3 font-semibold">Rollen</th>
+                <th class="px-4 py-3 font-semibold">Zuschnitte</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100">
+              <tr class="hover:bg-slate-50/50">
+                <td class="px-4 py-2.5 font-medium text-slate-900">FL 100 weiß</td>
+                <td class="px-4 py-2.5">G2 / EU2</td>
+                <td class="px-4 py-2.5">5</td>
+                <td class="px-4 py-2.5">40 x 2 m</td>
+                <td class="px-4 py-2.5 text-green-600"><i class="fa-solid fa-check"></i></td>
+              </tr>
+              <tr class="hover:bg-slate-50/50">
+                <td class="px-4 py-2.5 font-medium text-slate-900">FL 120 weiß</td>
+                <td class="px-4 py-2.5">G2 / EU2</td>
+                <td class="px-4 py-2.5">8</td>
+                <td class="px-4 py-2.5">40 x 2 m</td>
+                <td class="px-4 py-2.5 text-green-600"><i class="fa-solid fa-check"></i></td>
+              </tr>
+              <tr class="hover:bg-slate-50/50">
+                <td class="px-4 py-2.5 font-medium text-slate-900">FL 150 weiß</td>
+                <td class="px-4 py-2.5">G2 / EU2</td>
+                <td class="px-4 py-2.5">10</td>
+                <td class="px-4 py-2.5">40 x 2 m</td>
+                <td class="px-4 py-2.5 text-green-600"><i class="fa-solid fa-check"></i></td>
+              </tr>
+              <tr class="hover:bg-slate-50/50">
+                <td class="px-4 py-2.5 font-medium text-slate-900">FL 200 weiß</td>
+                <td class="px-4 py-2.5">G3 / EU3</td>
+                <td class="px-4 py-2.5">20</td>
+                <td class="px-4 py-2.5">20 x 2 m</td>
+                <td class="px-4 py-2.5 text-green-600"><i class="fa-solid fa-check"></i></td>
+              </tr>
+              <tr class="hover:bg-slate-50/50">
+                <td class="px-4 py-2.5 font-medium text-slate-900">FL 220 weiß</td>
+                <td class="px-4 py-2.5">G4 / EU4</td>
+                <td class="px-4 py-2.5">22</td>
+                <td class="px-4 py-2.5">20 x 2 m</td>
+                <td class="px-4 py-2.5 text-green-600"><i class="fa-solid fa-check"></i></td>
+              </tr>
+              <tr class="hover:bg-slate-50/50">
+                <td class="px-4 py-2.5 font-medium text-slate-900">V15/350 weiß</td>
+                <td class="px-4 py-2.5">G4 / EU4</td>
+                <td class="px-4 py-2.5">20</td>
+                <td class="px-4 py-2.5">20 x 2 m</td>
+                <td class="px-4 py-2.5 text-green-600"><i class="fa-solid fa-check"></i></td>
+              </tr>
+              <tr class="hover:bg-slate-50/50">
+                <td class="px-4 py-2.5 font-medium text-slate-900">V15/400 weiß</td>
+                <td class="px-4 py-2.5">G4 / EU4</td>
+                <td class="px-4 py-2.5">22</td>
+                <td class="px-4 py-2.5">20 x 2 m</td>
+                <td class="px-4 py-2.5 text-green-600"><i class="fa-solid fa-check"></i></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Lackierfilter -->
+    <section class="mt-10">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-orange-50 text-brand-orange">
+          <i class="fa-solid fa-spray-can-sparkles text-sm"></i>
+        </span>
+        <h3 class="text-lg font-bold text-slate-900">Filter für Lackieranlagen</h3>
+      </div>
+      <div class="overflow-hidden rounded-xl border border-slate-200">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-sm text-slate-600">
+            <thead class="bg-slate-50 text-xs uppercase text-slate-500 border-b border-slate-200">
+              <tr>
+                <th class="px-4 py-3 font-semibold">Typ</th>
+                <th class="px-4 py-3 font-semibold">Klasse</th>
+                <th class="px-4 py-3 font-semibold whitespace-nowrap">Dicke (mm)</th>
+                <th class="px-4 py-3 font-semibold">Rollen</th>
+                <th class="px-4 py-3 font-semibold">Zuschnitt</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100">
+              <tr class="hover:bg-slate-50/50">
+                <td class="px-4 py-2.5 font-medium text-slate-900">V300S</td>
+                <td class="px-4 py-2.5">M5 / F5</td>
+                <td class="px-4 py-2.5">15</td>
+                <td class="px-4 py-2.5">20 x 2 m</td>
+                <td class="px-4 py-2.5 text-green-600"><i class="fa-solid fa-check"></i></td>
+              </tr>
+              <tr class="hover:bg-slate-50/50">
+                <td class="px-4 py-2.5 font-medium text-slate-900">V500S</td>
+                <td class="px-4 py-2.5">M5 / F5</td>
+                <td class="px-4 py-2.5">25</td>
+                <td class="px-4 py-2.5">20 x 2 m</td>
+                <td class="px-4 py-2.5 text-green-600"><i class="fa-solid fa-check"></i></td>
+              </tr>
+              <tr class="hover:bg-slate-50/50">
+                <td class="px-4 py-2.5 font-medium text-slate-900">V600G</td>
+                <td class="px-4 py-2.5">M5 / F5</td>
+                <td class="px-4 py-2.5">25</td>
+                <td class="px-4 py-2.5">20 x 2 m</td>
+                <td class="px-4 py-2.5 text-green-600"><i class="fa-solid fa-check"></i></td>
+              </tr>
+              <tr class=" bg-slate-50/50">
+                <td colspan="5" class="px-4 py-1.5 text-xs font-semibold uppercase text-slate-400 tracking-wider">Paint
+                  Stop (Glasfaser)</td>
+              </tr>
+              <tr class="hover:bg-slate-50/50">
+                <td class="px-4 py-2.5 font-medium text-slate-900">
+                  Paint-Stop grün 3"
+                  <div class="mt-1 text-xs text-slate-500 font-normal">Variabel bis 2m</div>
+                </td>
+                <td class="px-4 py-2.5">G3 / EU3</td>
+                <td class="px-4 py-2.5">65-70</td>
+                <td class="px-4 py-2.5 text-xs leading-relaxed">
+                  <span class="block"><strong>Kleinrollen:</strong> 20m, 25m</span>
+                  <span class="block"><strong>Rollen:</strong> 80m, 91m</span>
+                </td>
+                <td class="px-4 py-2.5 text-slate-400">–</td>
+              </tr>
+              <tr class="hover:bg-slate-50/50">
+                <td class="px-4 py-2.5 font-medium text-slate-900">
+                  Paint-Stop grün 4"
+                  <div class="mt-1 text-xs text-slate-500 font-normal">Variabel bis 2m</div>
+                </td>
+                <td class="px-4 py-2.5">G4 / EU4</td>
+                <td class="px-4 py-2.5">100</td>
+                <td class="px-4 py-2.5 text-xs">
+                  <span class="block text-green-600">Standard lieferbar</span>
+                </td>
+                <td class="px-4 py-2.5 text-green-600"><i class="fa-solid fa-check"></i></td>
+              </tr>
+              <tr class=" bg-slate-50/50">
+                <td colspan="5" class="px-4 py-1.5 text-xs font-semibold uppercase text-slate-400 tracking-wider">Dust
+                  Stop (Staubbindend)</td>
+              </tr>
+              <tr class="hover:bg-slate-50/50">
+                <td class="px-4 py-2.5 font-medium text-slate-900">
+                  Dust-Stop 1"
+                  <div class="mt-1 text-xs text-slate-500 font-normal">Breiten: 1.53 / 1.85 / 2.00 m</div>
+                </td>
+                <td class="px-4 py-2.5">G2 / EU2</td>
+                <td class="px-4 py-2.5">25</td>
+                <td class="px-4 py-2.5 text-xs">
+                  <strong>Kleinrollen:</strong> 20m
+                </td>
+                <td class="px-4 py-2.5 text-green-600"><i class="fa-solid fa-check"></i></td>
+              </tr>
+              <tr class="hover:bg-slate-50/50">
+                <td class="px-4 py-2.5 font-medium text-slate-900">
+                  Dust-Stop 2"
+                  <div class="mt-1 text-xs text-slate-500 font-normal">Breiten: 1.53 / 1.85 / 2.00 m</div>
+                </td>
+                <td class="px-4 py-2.5">G3 / EU3</td>
+                <td class="px-4 py-2.5">50</td>
+                <td class="px-4 py-2.5 text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-4 py-2.5 text-green-600"><i class="fa-solid fa-check"></i></td>
+              </tr>
+              <tr class="hover:bg-slate-50/50">
+                <td class="px-4 py-2.5 font-medium text-slate-900">
+                  Dust-Stop 4"
+                  <div class="mt-1 text-xs text-slate-500 font-normal">Breiten: 1.53 / 1.85 / 2.00 m</div>
+                </td>
+                <td class="px-4 py-2.5">G4 / EU4</td>
+                <td class="px-4 py-2.5">100</td>
+                <td class="px-4 py-2.5 text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-4 py-2.5 text-green-600"><i class="fa-solid fa-check"></i></td>
+              </tr>
+              <tr class=" bg-slate-50/50">
+                <td colspan="5" class="px-4 py-1.5 text-xs font-semibold uppercase text-slate-400 tracking-wider">
+                  Glasfaser Sonstige</td>
+              </tr>
+              <tr class="hover:bg-slate-50/50">
+                <td class="px-4 py-2.5 font-medium text-slate-900">GV180G und K</td>
+                <td class="px-4 py-2.5">M5 / F5</td>
+                <td class="px-4 py-2.5">20</td>
+                <td class="px-4 py-2.5">10 x 1,5 m</td>
+                <td class="px-4 py-2.5 text-green-600"><i class="fa-solid fa-check"></i></td>
+              </tr>
+              <tr class="hover:bg-slate-50/50">
+                <td class="px-4 py-2.5 font-medium text-slate-900">UG300 Basis</td>
+                <td class="px-4 py-2.5">G4 / EU4</td>
+                <td class="px-4 py-2.5">20</td>
+                <td class="px-4 py-2.5">5 x 2,5 m</td>
+                <td class="px-4 py-2.5 text-green-600"><i class="fa-solid fa-check"></i></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Note -->
+    <div class="mt-10 rounded-xl bg-slate-50 p-4 text-xs text-slate-500 border border-slate-100">
+      <p><strong>Hinweis:</strong> Oben aufgeführt sind ausschließlich unsere Standardabmessungen. Sollten Sie
+        Filtermatten mit anderen Abmessungen oder anderen Bezeichnungen benötigen, bitten wir Sie, diese bei uns
+        anzufragen.</p>
+    </div>
+  </template>
+
+  <template id="tpl-kartonfilter">
+    <!-- 3. Kartonfilter -->
+    <section>
+      <div class="flex items-center gap-3 mb-4">
+        <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-orange-50 text-brand-orange">
+          <i class="fa-solid fa-box text-sm"></i>
+        </span>
+        <h3 class="text-lg font-bold text-slate-900">Kartonfilter</h3>
+      </div>
+      <div class="overflow-hidden rounded-xl border border-slate-200">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-sm text-slate-600">
+            <thead class="bg-slate-50 text-xs uppercase text-slate-500 border-b border-slate-200">
+              <tr>
+                <th class="px-4 py-3 font-semibold">Höhe</th>
+                <th class="px-4 py-3 font-semibold">Länge (ca.)</th>
+                <th class="px-4 py-3 font-semibold">Tiefe</th>
+                <th class="px-4 py-3 font-semibold">Nutzfläche</th>
+                <th class="px-4 py-3 font-semibold">Lieferbar</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100">
+              <tr class="hover:bg-slate-50/50">
+                <td class="px-4 py-2.5 font-medium text-slate-900">KF 50</td>
+                <td class="px-4 py-2.5">2 x 10 m</td>
+                <td class="px-4 py-2.5">65 mm</td>
+                <td class="px-4 py-2.5">10 m²</td>
+                <td class="px-4 py-2.5 text-green-600"><i class="fa-solid fa-check"></i></td>
+              </tr>
+              <tr class="hover:bg-slate-50/50">
+                <td class="px-4 py-2.5 font-medium text-slate-900">KF 75</td>
+                <td class="px-4 py-2.5">13 m</td>
+                <td class="px-4 py-2.5">65 mm</td>
+                <td class="px-4 py-2.5">10 m²</td>
+                <td class="px-4 py-2.5 text-green-600"><i class="fa-solid fa-check"></i></td>
+              </tr>
+              <tr class="hover:bg-slate-50/50">
+                <td class="px-4 py-2.5 font-medium text-slate-900">KF 90</td>
+                <td class="px-4 py-2.5">11 m</td>
+                <td class="px-4 py-2.5">65 mm</td>
+                <td class="px-4 py-2.5">10 m²</td>
+                <td class="px-4 py-2.5 text-green-600"><i class="fa-solid fa-check"></i></td>
+              </tr>
+              <tr class="hover:bg-slate-50/50">
+                <td class="px-4 py-2.5 font-medium text-slate-900">KF 100</td>
+                <td class="px-4 py-2.5">10 m</td>
+                <td class="px-4 py-2.5">65 mm</td>
+                <td class="px-4 py-2.5">10 m²</td>
+                <td class="px-4 py-2.5 text-green-600"><i class="fa-solid fa-check"></i></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Trockenkabinen -->
+    <section class="mt-10">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-orange-50 text-brand-orange">
+          <i class="fa-solid fa-temperature-three-quarters text-sm"></i>
+        </span>
+        <h3 class="text-lg font-bold text-slate-900">Filter für Trockenkabinen</h3>
+      </div>
+      <div class="overflow-hidden rounded-xl border border-slate-200">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-sm text-slate-600">
+            <thead class="bg-slate-50 text-xs uppercase text-slate-500 border-b border-slate-200">
+              <tr>
+                <th class="px-4 py-3 font-semibold">Typ</th>
+                <th class="px-4 py-3 font-semibold">Klasse</th>
+                <th class="px-4 py-3 font-semibold">Dimension</th>
+                <th class="px-4 py-3 font-semibold">Temp. max</th>
+                <th class="px-4 py-3 font-semibold">Ausführung</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100">
+              <tr class="hover:bg-slate-50/50">
+                <td class="px-4 py-2.5 font-medium text-slate-900">SK100</td>
+                <td class="px-4 py-2.5">M5 / F5</td>
+                <td class="px-4 py-2.5">480 x 480 x 14 mm</td>
+                <td class="px-4 py-2.5">100 °C</td>
+                <td class="px-4 py-2.5 text-xs">Steifer Kartonrahmen</td>
+              </tr>
+              <tr class="hover:bg-slate-50/50">
+                <td class="px-4 py-2.5 font-medium text-slate-900">ZH120</td>
+                <td class="px-4 py-2.5">M5 / F5</td>
+                <td class="px-4 py-2.5">480 x 480 x 14 mm</td>
+                <td class="px-4 py-2.5">100 °C</td>
+                <td class="px-4 py-2.5 text-xs">Elastischer Rahmen</td>
+              </tr>
+              <tr class="hover:bg-slate-50/50">
+                <td class="px-4 py-2.5 font-medium text-slate-900">AL200</td>
+                <td class="px-4 py-2.5">M5 / F5</td>
+                <td class="px-4 py-2.5">480 x 480 x 14 mm</td>
+                <td class="px-4 py-2.5 text-slate-900 font-bold">200 °C</td>
+                <td class="px-4 py-2.5 text-xs">Alu-Einfassung</td>
+              </tr>
+              <tr class="hover:bg-slate-50/50">
+                <td class="px-4 py-2.5 font-medium text-slate-900">UG300</td>
+                <td class="px-4 py-2.5">G4 / EU4</td>
+                <td class="px-4 py-2.5">480 x 480 x 14 mm</td>
+                <td class="px-4 py-2.5 text-slate-900 font-bold">300 °C</td>
+                <td class="px-4 py-2.5 text-xs">Alu-Einfassung</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Note -->
+    <div class="mt-10 rounded-xl bg-slate-50 p-4 text-xs text-slate-500 border border-slate-100">
+      <p><strong>Hinweis:</strong> Oben aufgeführt sind ausschließlich unsere Standardabmessungen. Sollten Sie
+        Filtermatten mit anderen Abmessungen oder anderen Bezeichnungen benötigen, bitten wir Sie, diese bei uns
+        anzufragen.</p>
+    </div>
+  </template>
+</body>
+
+</html>
