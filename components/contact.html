@@ -1,0 +1,134 @@
+<section id="kontakt" class="bg-slate-50 px-6 py-24">
+    <div class="mx-auto max-w-4xl text-center">
+        <h2
+            class="js-animate mb-4 text-3xl font-semibold tracking-tight text-slate-900 sm:text-[2.1rem] opacity-0 translate-y-10 transition duration-700">
+            Kontaktieren Sie uns.
+        </h2>
+        <p
+            class="js-animate mx-auto max-w-xl text-[0.96rem] leading-relaxed text-slate-600 opacity-0 translate-y-10 transition duration-700 delay-100">
+            Wir melden uns innerhalb eines Werktages mit Rückfragen oder einem konkreten Vorschlag.
+        </p>
+    </div>
+
+    <!-- 2-column layout -->
+    <div class="mx-auto mt-10 grid max-w-5xl gap-8 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
+        <!-- LEFT: Kontaktinfos stacked -->
+        <div class="space-y-4">
+            <div
+                class="js-animate rounded-3xl bg-white px-6 py-7 text-left shadow-sm opacity-0 translate-y-10 transition duration-700">
+                <div
+                    class="mb-3 flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-50 text-lg text-slate-900">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+                <h3 class="mb-1 text-sm font-semibold text-slate-900">Telefon</h3>
+                <p class="mb-2 text-[0.8rem] text-slate-600">Mo – Fr: 8:00 – 17:00 Uhr</p>
+                <a href="tel:+4912345678" class="text-sm font-semibold text-brand-orange hover:underline">+49 (0) 123
+                    456
+                    78</a>
+            </div>
+
+            <div
+                class="js-animate rounded-3xl bg-white px-6 py-7 text-left shadow-sm opacity-0 translate-y-10 transition duration-700 delay-75">
+                <div
+                    class="mb-3 flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-50 text-lg text-slate-900">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <h3 class="mb-1 text-sm font-semibold text-slate-900">E-Mail</h3>
+                <p class="mb-2 text-[0.8rem] text-slate-600">Antwort in der Regel innerhalb von 24 Stunden</p>
+                <a href="mailto:info@filtega.de"
+                    class="text-sm font-semibold text-brand-orange hover:underline">info@filtega.de</a>
+            </div>
+
+            <div
+                class="js-animate rounded-3xl bg-white px-6 py-7 text-left shadow-sm opacity-0 translate-y-10 transition duration-700 delay-150">
+                <div
+                    class="mb-3 flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-50 text-lg text-slate-900">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <h3 class="mb-1 text-sm font-semibold text-slate-900">Adresse</h3>
+                <p class="mb-2 text-[0.8rem] text-slate-600">Besuchen Sie uns vor Ort nach Terminvereinbarung</p>
+                <a href="#" class="text-sm font-semibold text-brand-orange hover:underline">Musterstraße 123, 12345
+                    Stadt</a>
+            </div>
+        </div>
+
+        <!-- RIGHT: Form -->
+        <div
+            class="js-animate rounded-3xl bg-white px-6 py-8 shadow-sm opacity-0 translate-y-10 transition duration-700 delay-200">
+            <h3 class="mb-4 text-lg font-semibold text-slate-900">Kurzformular für Ihre Anfrage</h3>
+            <p class="mb-6 text-[0.9rem] text-slate-600">
+                Beschreiben Sie kurz Ihre Anwendung – wir melden uns mit Rückfragen oder einem konkreten Vorschlag.
+            </p>
+            <form name="contact-form" method="post" class="space-y-4" data-netlify="true">
+                <div class="grid gap-4 md:grid-cols-2">
+                    <div class="text-left">
+                        <label for="name" class="mb-1 block text-[0.8rem] font-medium text-slate-700">Name*</label>
+                        <input id="name" name="name" required type="text"
+                            class="w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-900 outline-none transition focus:border-brand-orange focus:bg-white focus:ring-1 focus:ring-brand-orange" />
+                    </div>
+                    <div class="text-left">
+                        <label for="company" class="mb-1 block text-[0.8rem] font-medium text-slate-700">Firma</label>
+                        <input id="company" name="company" type="text"
+                            class="w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-900 outline-none transition focus:border-brand-orange focus:bg-white focus:ring-1 focus:ring-brand-orange" />
+                    </div>
+                </div>
+                <div class="grid gap-4 md:grid-cols-2">
+                    <div class="text-left">
+                        <label for="email" class="mb-1 block text-[0.8rem] font-medium text-slate-700">E-Mail*</label>
+                        <input id="email" name="email" required type="email"
+                            class="w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-900 outline-none transition focus:border-brand-orange focus:bg-white focus:ring-1 focus:ring-brand-orange" />
+                    </div>
+                    <div class="text-left">
+                        <label for="phone" class="mb-1 block text-[0.8rem] font-medium text-slate-700">Telefon
+                            (optional)</label>
+                        <input id="phone" name="phone" type="tel"
+                            class="w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-900 outline-none transition focus:border-brand-orange focus:bg-white focus:ring-1 focus:ring-brand-orange" />
+                    </div>
+                </div>
+                <div class="text-left">
+                    <label for="application" class="mb-1 block text-[0.8rem] font-medium text-slate-700">Anlage /
+                        Anwendung*</label>
+                    <select id="application" name="application" required
+                        class="w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-900 outline-none transition focus:border-brand-orange focus:bg-white focus:ring-1 focus:ring-brand-orange">
+                        <option value="">Bitte auswählen</option>
+                        <option value="klima">Klima- / Lüftungsanlage</option>
+                        <option value="lack">Lackieranlage / Spritzkabine</option>
+                        <option value="entstaubung">Entstaubungsanlage</option>
+                        <option value="nassfiltration">Nassfiltration / Kühlschmierstoffe</option>
+                        <option value="sonstiges">Sonstige Anwendung</option>
+                    </select>
+                </div>
+                <div class="text-left">
+                    <label for="message" class="mb-1 block text-[0.8rem] font-medium text-slate-700">Nachricht*</label>
+                    <textarea id="message" name="message" rows="4" required
+                        class="w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-900 outline-none transition focus:border-brand-orange focus:bg-white focus:ring-1 focus:ring-brand-orange"
+                        placeholder="Kurzbeschreibung Ihrer Anlage, Filtertypen, Wechselintervall …"></textarea>
+                </div>
+                <div class="flex items-start gap-2 text-left">
+                    <div class="text-left">
+                        <label for="privacy" class="flex cursor-pointer items-start gap-2">
+                            <input id="privacy" name="privacy" type="checkbox" required checked
+                                class="sr-only privacy-input" />
+
+                            <span class="privacy-box mt-[2px]"></span>
+
+                            <span class="text-[0.75rem] leading-snug text-slate-600">
+                                Ich stimme zu, dass meine Angaben zur Kontaktaufnahme und Zuordnung für eventuelle
+                                Rückfragen
+                                gespeichert werden.
+                                Weitere Informationen in der Datenschutzerklärung.
+                            </span>
+                        </label>
+                    </div>
+                </div>
+                <div class="pt-2">
+                    <button type="submit"
+                        class="inline-flex items-center gap-2 rounded-full bg-brand-orange px-6 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-orange-600">
+                        Anfrage senden
+                        <i class="fa-solid fa-paper-plane text-[0.7rem]"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
