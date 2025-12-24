@@ -598,57 +598,7 @@
 
 
 
-  <script>
-    function openModal(templateId) {
-      const modal = document.getElementById('dynamicModal');
-      const backdrop = document.getElementById('modalBackdrop');
-      const panel = document.getElementById('modalPanel');
-      const contentContainer = document.getElementById('modalContent');
-      const template = document.getElementById(templateId);
-
-      if (!template) {
-        console.error(`Template with ID "${templateId}" not found`);
-        return;
-      }
-
-      // Clear existing content
-      contentContainer.innerHTML = '';
-
-      // Clone and append new content
-      const clone = template.content.cloneNode(true);
-      contentContainer.appendChild(clone);
-
-      // Show modal
-      modal.classList.remove('hidden');
-      // Force reflow
-      void modal.offsetWidth;
-
-      backdrop.classList.remove('opacity-0');
-      panel.classList.remove('translate-x-full');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeModal() {
-      const modal = document.getElementById('dynamicModal');
-      const backdrop = document.getElementById('modalBackdrop');
-      const panel = document.getElementById('modalPanel');
-
-      backdrop.classList.add('opacity-0');
-      panel.classList.add('translate-x-full');
-
-      setTimeout(() => {
-        modal.classList.add('hidden');
-        document.body.style.overflow = '';
-      }, 500);
-    }
-
-    // Close on escape key
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && !document.getElementById('dynamicModal').classList.contains('hidden')) {
-        closeModal();
-      }
-    });
-  </script>
+  <script src="js/flyout.js"></script>
 
   <!-- Dynamic Side Modal -->
   <div id="dynamicModal" class="fixed inset-0 z-[60] hidden" aria-labelledby="modal-title" role="dialog"

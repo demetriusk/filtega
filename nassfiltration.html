@@ -186,6 +186,20 @@
               </div>
               <div
                 class="mt-auto flex flex-col gap-6 border-t border-slate-100 pt-6 sm:flex-row sm:items-center sm:justify-between">
+                <!-- Documents -->
+                <div class="flex flex-col gap-2">
+                  <span class="text-[0.65rem] font-bold uppercase tracking-widest text-slate-400">Dokumente</span>
+                  <div class="flex flex-wrap gap-4">
+                    <button type="button" onclick="openModal('tpl-nassfiltervliese')"
+                      class="group/link flex items-center gap-2 text-sm font-medium text-slate-600 transition hover:text-brand-orange">
+                      <i
+                        class="fa-solid fa-ruler-combined text-slate-400 transition group-hover/link:text-brand-orange"></i>
+                      <span>Standardabmessungen</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- CTA -->
                 <div class="flex-shrink-0">
                   <a href="#kontakt"
                     class="inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-orange px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-orange-500/20 transition hover:bg-orange-600 hover:-translate-y-0.5 sm:w-auto">
@@ -229,6 +243,20 @@
               </div>
               <div
                 class="mt-auto flex flex-col gap-6 border-t border-slate-100 pt-6 sm:flex-row sm:items-center sm:justify-between">
+                <!-- Documents -->
+                <div class="flex flex-col gap-2">
+                  <span class="text-[0.65rem] font-bold uppercase tracking-widest text-slate-400">Dokumente</span>
+                  <div class="flex flex-wrap gap-4">
+                    <button type="button" onclick="openModal('tpl-filterbeutel')"
+                      class="group/link flex items-center gap-2 text-sm font-medium text-slate-600 transition hover:text-brand-orange">
+                      <i
+                        class="fa-solid fa-ruler-combined text-slate-400 transition group-hover/link:text-brand-orange"></i>
+                      <span>Standardabmessungen</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- CTA -->
                 <div class="flex-shrink-0">
                   <a href="#kontakt"
                     class="inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-orange px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-orange-500/20 transition hover:bg-orange-600 hover:-translate-y-0.5 sm:w-auto">
@@ -237,7 +265,6 @@
                   </a>
                 </div>
               </div>
-            </div>
           </article>
 
           <!-- 3. Filterkerzen -->
@@ -269,6 +296,20 @@
               </div>
               <div
                 class="mt-auto flex flex-col gap-6 border-t border-slate-100 pt-6 sm:flex-row sm:items-center sm:justify-between">
+                <!-- Documents -->
+                <div class="flex flex-col gap-2">
+                  <span class="text-[0.65rem] font-bold uppercase tracking-widest text-slate-400">Dokumente</span>
+                  <div class="flex flex-wrap gap-4">
+                    <button type="button" onclick="openModal('tpl-filterkerzen')"
+                      class="group/link flex items-center gap-2 text-sm font-medium text-slate-600 transition hover:text-brand-orange">
+                      <i
+                        class="fa-solid fa-ruler-combined text-slate-400 transition group-hover/link:text-brand-orange"></i>
+                      <span>Standardabmessungen</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- CTA -->
                 <div class="flex-shrink-0">
                   <a href="#kontakt"
                     class="inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-orange px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-orange-500/20 transition hover:bg-orange-600 hover:-translate-y-0.5 sm:w-auto">
@@ -306,8 +347,777 @@
 
 
 
+  <!-- Dynamic Side Modal -->
+  <div id="dynamicModal" class="fixed inset-0 z-[60] hidden" aria-labelledby="modal-title" role="dialog"
+    aria-modal="true">
+    <!-- Backdrop -->
+    <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity duration-500 opacity-0"
+      id="modalBackdrop" onclick="closeModal()"></div>
+
+    <!-- Slide-out Panel -->
+    <div class="absolute inset-y-0 right-0 flex max-w-full pl-0 sm:pl-10 pointer-events-none">
+      <div
+        class="pointer-events-auto relative w-screen max-w-2xl transform transition-transform duration-500 translate-x-full"
+        id="modalPanel">
+        <div class="flex h-full flex-col bg-white shadow-2xl">
+          <!-- Header -->
+          <div class="flex items-center justify-between border-b border-slate-100 px-6 py-4 sm:px-8">
+            <h2 class="text-xl font-bold text-slate-900" id="modal-title">Standardabmessungen</h2>
+            <button type="button"
+              class="rounded-full p-2 text-slate-400 transition hover:bg-slate-100 hover:text-slate-600"
+              onclick="closeModal()">
+              <span class="sr-only">Schließen</span>
+              <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+          </div>
+
+          <!-- Dynamic Content Container -->
+          <div id="modalContent" class="flex-1 overflow-y-auto px-6 py-6 sm:px-8 space-y-10">
+            <!-- Content will be injected here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <template id="tpl-nassfiltervliese">
+    <!-- Nassfiltervliese Standardabmessungen -->
+    <section>
+      <div class="flex items-center gap-3 mb-4">
+        <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-orange-50 text-brand-orange">
+          <i class="fa-solid fa-scroll text-sm"></i>
+        </span>
+        <h3 class="text-lg font-bold text-slate-900">Lieferbarkeit Nassfiltervliese Standardabmessungen</h3>
+      </div>
+      <div class="overflow-hidden rounded-xl border border-slate-200">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-sm text-slate-600">
+            <thead class="bg-slate-50 text-xs uppercase text-slate-500 border-b border-slate-200">
+              <tr>
+                <th rowspan="2" class="px-4 py-3 font-semibold align-bottom">Material</th>
+                <th rowspan="2" class="px-4 py-3 font-semibold text-center align-bottom border-l border-slate-200">
+                  Rollenlänge</th>
+                <th colspan="6" class="px-4 py-3 font-semibold text-center border-l border-slate-200">Rollenbreite</th>
+              </tr>
+              <tr>
+                <th class="px-2 py-3 font-semibold text-center border-t border-slate-200 border-l border-slate-200">500
+                  mm</th>
+                <th class="px-2 py-3 font-semibold text-center border-t border-slate-200">700 mm</th>
+                <th class="px-2 py-3 font-semibold text-center border-t border-slate-200">1000 mm</th>
+                <th class="px-2 py-3 font-semibold text-center border-t border-slate-200">1020 mm</th>
+                <th class="px-2 py-3 font-semibold text-center border-t border-slate-200">1040 mm</th>
+                <th class="px-2 py-3 font-semibold text-center border-t border-slate-200">2000 mm</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100">
+              <!-- Viskose Header -->
+              <tr class="bg-slate-50/30">
+                <td colspan="8" class="px-4 py-2 text-xs font-bold uppercase text-slate-500 bg-slate-100/50">Viskose
+                </td>
+              </tr>
+              <!-- Viskose Rows -->
+              <tr class="hover:bg-slate-50/50">
+                <td class="px-4 py-2.5 font-medium text-slate-900">17 g/m²</td>
+                <td class="px-4 py-2.5 text-center border-l border-slate-100">250 m</td>
+                <td class="px-2 py-2.5 text-center border-l border-slate-100 text-green-600"><i
+                    class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+              </tr>
+              <tr class="hover:bg-slate-50/50">
+                <td class="px-4 py-2.5 font-medium text-slate-900">20 g/m²</td>
+                <td class="px-4 py-2.5 text-center border-l border-slate-100">250 m</td>
+                <td class="px-2 py-2.5 text-center border-l border-slate-100 text-green-600"><i
+                    class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+              </tr>
+              <tr class="hover:bg-slate-50/50">
+                <td class="px-4 py-2.5 font-medium text-slate-900">25 g/m²</td>
+                <td class="px-4 py-2.5 text-center border-l border-slate-100">250 m</td>
+                <td class="px-2 py-2.5 text-center border-l border-slate-100 text-green-600"><i
+                    class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+              </tr>
+              <tr class="hover:bg-slate-50/50">
+                <td class="px-4 py-2.5 font-medium text-slate-900">30 g/m²</td>
+                <td class="px-4 py-2.5 text-center border-l border-slate-100">100 m</td>
+                <td class="px-2 py-2.5 text-center border-l border-slate-100 text-green-600"><i
+                    class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+              </tr>
+              <tr class="hover:bg-slate-50/50">
+                <td class="px-4 py-2.5 font-medium text-slate-900">35 g/m²</td>
+                <td class="px-4 py-2.5 text-center border-l border-slate-100">100 m</td>
+                <td class="px-2 py-2.5 text-center border-l border-slate-100 text-green-600"><i
+                    class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+              </tr>
+              <tr class="hover:bg-slate-50/50">
+                <td class="px-4 py-2.5 font-medium text-slate-900">50 g/m²</td>
+                <td class="px-4 py-2.5 text-center border-l border-slate-100">100 m</td>
+                <td class="px-2 py-2.5 text-center border-l border-slate-100 text-green-600"><i
+                    class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+              </tr>
+              <tr class="hover:bg-slate-50/50">
+                <td class="px-4 py-2.5 font-medium text-slate-900">65 g/m²</td>
+                <td class="px-4 py-2.5 text-center border-l border-slate-100">100 m</td>
+                <td class="px-2 py-2.5 text-center border-l border-slate-100 text-green-600"><i
+                    class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+              </tr>
+
+              <!-- Polypropylen Header -->
+              <tr class="bg-slate-50/30">
+                <td colspan="8"
+                  class="px-4 py-2 text-xs font-bold uppercase text-slate-500 bg-slate-100/50 border-t border-slate-100">
+                  Polypropylen</td>
+              </tr>
+              <!-- Polypropylen Rows -->
+              <tr class="hover:bg-slate-50/50">
+                <td class="px-4 py-2.5 font-medium text-slate-900">20 g/m²</td>
+                <td class="px-4 py-2.5 text-center border-l border-slate-100">250 m</td>
+                <td class="px-2 py-2.5 text-center border-l border-slate-100 text-green-600"><i
+                    class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+              </tr>
+              <tr class="hover:bg-slate-50/50">
+                <td class="px-4 py-2.5 font-medium text-slate-900">30 g/m²</td>
+                <td class="px-4 py-2.5 text-center border-l border-slate-100">100 m</td>
+                <td class="px-2 py-2.5 text-center border-l border-slate-100 text-green-600"><i
+                    class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+              </tr>
+              <tr class="hover:bg-slate-50/50">
+                <td class="px-4 py-2.5 font-medium text-slate-900">50 g/m²</td>
+                <td class="px-4 py-2.5 text-center border-l border-slate-100">100 m</td>
+                <td class="px-2 py-2.5 text-center border-l border-slate-100 text-green-600"><i
+                    class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+              </tr>
+              <tr class="hover:bg-slate-50/50">
+                <td class="px-4 py-2.5 font-medium text-slate-900">70 g/m²</td>
+                <td class="px-4 py-2.5 text-center border-l border-slate-100">100 m</td>
+                <td class="px-2 py-2.5 text-center border-l border-slate-100 text-green-600"><i
+                    class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+              </tr>
+              <tr class="hover:bg-slate-50/50">
+                <td class="px-4 py-2.5 font-medium text-slate-900">100 g/m²</td>
+                <td class="px-4 py-2.5 text-center border-l border-slate-100">150 m</td>
+                <td class="px-2 py-2.5 text-center border-l border-slate-100 text-green-600"><i
+                    class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+              </tr>
+
+              <!-- Polyester Spinnvlies Header -->
+              <tr class="bg-slate-50/30">
+                <td colspan="8"
+                  class="px-4 py-2 text-xs font-bold uppercase text-slate-500 bg-slate-100/50 border-t border-slate-100">
+                  Polyester Spinnvlies</td>
+              </tr>
+              <!-- Polyester Spinnvlies Rows -->
+              <tr class="hover:bg-slate-50/50">
+                <td class="px-4 py-2.5 font-medium text-slate-900">15 g/m²</td>
+                <td class="px-4 py-2.5 text-center border-l border-slate-100">250 m</td>
+                <td class="px-2 py-2.5 text-center border-l border-slate-100 text-green-600"><i
+                    class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+              </tr>
+              <tr class="hover:bg-slate-50/50">
+                <td class="px-4 py-2.5 font-medium text-slate-900">20 g/m²</td>
+                <td class="px-4 py-2.5 text-center border-l border-slate-100">250 m</td>
+                <td class="px-2 py-2.5 text-center border-l border-slate-100 text-green-600"><i
+                    class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+              </tr>
+              <tr class="hover:bg-slate-50/50">
+                <td class="px-4 py-2.5 font-medium text-slate-900">30 g/m²</td>
+                <td class="px-4 py-2.5 text-center border-l border-slate-100">250 m</td>
+                <td class="px-2 py-2.5 text-center border-l border-slate-100 text-green-600"><i
+                    class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+              </tr>
+              <tr class="hover:bg-slate-50/50">
+                <td class="px-4 py-2.5 font-medium text-slate-900">35 g/m²</td>
+                <td class="px-4 py-2.5 text-center border-l border-slate-100">100 m</td>
+                <td class="px-2 py-2.5 text-center border-l border-slate-100 text-green-600"><i
+                    class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+              </tr>
+              <tr class="hover:bg-slate-50/50">
+                <td class="px-4 py-2.5 font-medium text-slate-900">50 g/m²</td>
+                <td class="px-4 py-2.5 text-center border-l border-slate-100">100 m</td>
+                <td class="px-2 py-2.5 text-center border-l border-slate-100 text-green-600"><i
+                    class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+              </tr>
+              <tr class="hover:bg-slate-50/50">
+                <td class="px-4 py-2.5 font-medium text-slate-900">70 g/m²</td>
+                <td class="px-4 py-2.5 text-center border-l border-slate-100">100 m</td>
+                <td class="px-2 py-2.5 text-center border-l border-slate-100 text-green-600"><i
+                    class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+              </tr>
+
+              <!-- Polyester Nadelvlies Header -->
+              <tr class="bg-slate-50/30">
+                <td colspan="8"
+                  class="px-4 py-2 text-xs font-bold uppercase text-slate-500 bg-slate-100/50 border-t border-slate-100">
+                  Polyester Nadelvlies</td>
+              </tr>
+              <!-- Polyester Nadelvlies Rows -->
+              <tr class="hover:bg-slate-50/50">
+                <td class="px-4 py-2.5 font-medium text-slate-900">150 g/m²</td>
+                <td class="px-4 py-2.5 text-center border-l border-slate-100">50 m</td>
+                <td class="px-2 py-2.5 text-center border-l border-slate-100 text-green-600"><i
+                    class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                <td class="px-2 py-2.5 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="border-t border-slate-200 bg-slate-50 p-4 text-xs text-slate-500 space-y-2">
+          <ul class="flex flex-wrap gap-4 list-disc list-inside">
+            <li><span class="font-medium text-slate-700"><i class="fa-solid fa-check text-green-600"></i></span> =
+              standardmäßig lieferbar</li>
+            <li><span class="font-medium text-slate-700">-</span> = nicht standardmäßig lieferbar</li>
+          </ul>
+          <p>
+            Hülseninnendurchmesser - Standard = 71 mm
+          </p>
+          <p class="italic text-slate-400">
+            Oben aufgeführt sind ausschließlich unsere Standardabmessungen. Sollten Sie Vliese mit anderen Breiten oder
+            Längen, anderen Bezeichnungen oder anderen Hülsendurchmesser benötigen bitten wir Sie diese bei uns
+            anzufragen.
+          </p>
+        </div>
+      </div>
+    </section>
+    <template id="tpl-filterbeutel">
+      <!-- Sieb- und Filterbeutel Standardabmessungen -->
+      <section>
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-orange-50 text-brand-orange">
+            <i class="fa-solid fa-ruler-combined text-sm"></i>
+          </span>
+          <h3 class="text-lg font-bold text-slate-900">Lieferbarkeit Ringfilterbeutel Standardabmessungen</h3>
+        </div>
+
+        <!-- Table 1: Beuteldurchmesser 180 mm -->
+        <div class="overflow-hidden rounded-xl border border-slate-200 mb-8">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-sm text-slate-600">
+              <thead class="bg-slate-50 text-xs uppercase text-slate-500 border-b border-slate-200">
+                <tr>
+                  <th colspan="7" class="px-4 py-3 font-semibold text-slate-900 bg-slate-100 text-sm">Beuteldurchmesser
+                    180 mm</th>
+                </tr>
+                <tr>
+                  <th class="px-4 py-3 font-semibold align-bottom">Maschenweite µm</th>
+                  <th colspan="3" class="px-4 py-3 font-semibold text-center border-l border-slate-200">D=180 mm x L=810
+                    mm</th>
+                  <th colspan="3" class="px-4 py-3 font-semibold text-center border-l border-slate-200">D=180 mm x L=430
+                    mm</th>
+                </tr>
+                <tr>
+                  <th class="px-4 py-3 font-semibold border-t border-slate-200"></th>
+                  <th class="px-2 py-3 font-semibold text-center border-t border-slate-200 border-l border-slate-200">
+                    Einzel</th>
+                  <th class="px-2 py-3 font-semibold text-center border-t border-slate-200">Karton</th>
+                  <th class="px-2 py-3 font-semibold text-center border-t border-slate-200">Inhalt</th>
+                  <th class="px-2 py-3 font-semibold text-center border-t border-slate-200 border-l border-slate-200">
+                    Einzel</th>
+                  <th class="px-2 py-3 font-semibold text-center border-t border-slate-200">Karton</th>
+                  <th class="px-2 py-3 font-semibold text-center border-t border-slate-200">Inhalt</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100">
+                <!-- Polyamid 6.6 Monofilgewebe -->
+                <tr class="bg-slate-50/30">
+                  <td colspan="7" class="px-4 py-2 text-xs font-bold uppercase text-slate-500 bg-slate-100/50">Polyamid
+                    6.6 Monofilgewebe</td>
+                </tr>
+                <tr class="hover:bg-slate-50/50">
+                  <td class="px-4 py-2 font-medium text-slate-900">25 - 400</td>
+                  <td class="px-2 py-2 text-center border-l border-slate-100 text-green-600"><i
+                      class="fa-solid fa-check"></i></td>
+                  <td class="px-2 py-2 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                  <td class="px-2 py-2 text-center">60</td>
+                  <td class="px-2 py-2 text-center border-l border-slate-100 text-green-600"><i
+                      class="fa-solid fa-check"></i></td>
+                  <td class="px-2 py-2 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                  <td class="px-2 py-2 text-center">60</td>
+                </tr>
+                <tr class="hover:bg-slate-50/50">
+                  <td class="px-4 py-2 font-medium text-slate-900">500, 600, 800, 1000</td>
+                  <td class="px-2 py-2 text-center border-l border-slate-100 text-green-600"><i
+                      class="fa-solid fa-check"></i></td>
+                  <td class="px-2 py-2 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                  <td class="px-2 py-2 text-center">40</td>
+                  <td class="px-2 py-2 text-center border-l border-slate-100 text-green-600"><i
+                      class="fa-solid fa-check"></i></td>
+                  <td class="px-2 py-2 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                  <td class="px-2 py-2 text-center">50</td>
+                </tr>
+
+                <!-- Polyester Monofilgewebe -->
+                <tr class="bg-slate-50/30">
+                  <td colspan="7"
+                    class="px-4 py-2 text-xs font-bold uppercase text-slate-500 bg-slate-100/50 border-t border-slate-100">
+                    Polyester Monofilgewebe</td>
+                </tr>
+                <tr class="hover:bg-slate-50/50">
+                  <td class="px-4 py-2 font-medium text-slate-900">50 - 400</td>
+                  <td class="px-2 py-2 text-center border-l border-slate-100 text-green-600"><i
+                      class="fa-solid fa-check"></i></td>
+                  <td class="px-2 py-2 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                  <td class="px-2 py-2 text-center">60</td>
+                  <td class="px-2 py-2 text-center border-l border-slate-100 text-green-600"><i
+                      class="fa-solid fa-check"></i></td>
+                  <td class="px-2 py-2 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                  <td class="px-2 py-2 text-center">60</td>
+                </tr>
+                <tr class="hover:bg-slate-50/50">
+                  <td class="px-4 py-2 font-medium text-slate-900">500, 600, 800, 1000</td>
+                  <td class="px-2 py-2 text-center border-l border-slate-100 text-green-600"><i
+                      class="fa-solid fa-check"></i></td>
+                  <td class="px-2 py-2 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                  <td class="px-2 py-2 text-center">40</td>
+                  <td class="px-2 py-2 text-center border-l border-slate-100 text-green-600"><i
+                      class="fa-solid fa-check"></i></td>
+                  <td class="px-2 py-2 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                  <td class="px-2 py-2 text-center">50</td>
+                </tr>
+
+                <!-- Polyester Nadelfilz -->
+                <tr class="bg-slate-50/30">
+                  <td colspan="7"
+                    class="px-4 py-2 text-xs font-bold uppercase text-slate-500 bg-slate-100/50 border-t border-slate-100">
+                    Polyester Nadelfilz</td>
+                </tr>
+                <tr class="hover:bg-slate-50/50">
+                  <td class="px-4 py-2 font-medium text-slate-900">1</td>
+                  <td class="px-2 py-2 text-center border-l border-slate-100 text-green-600"><i
+                      class="fa-solid fa-check"></i></td>
+                  <td class="px-2 py-2 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                  <td class="px-2 py-2 text-center">30</td>
+                  <td class="px-2 py-2 text-center border-l border-slate-100 text-green-600"><i
+                      class="fa-solid fa-check"></i></td>
+                  <td class="px-2 py-2 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                  <td class="px-2 py-2 text-center">40</td>
+                </tr>
+                <tr class="hover:bg-slate-50/50">
+                  <td class="px-4 py-2 font-medium text-slate-900">5, 10, 25, 50, 100</td>
+                  <td class="px-2 py-2 text-center border-l border-slate-100 text-green-600"><i
+                      class="fa-solid fa-check"></i></td>
+                  <td class="px-2 py-2 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                  <td class="px-2 py-2 text-center">40</td>
+                  <td class="px-2 py-2 text-center border-l border-slate-100 text-green-600"><i
+                      class="fa-solid fa-check"></i></td>
+                  <td class="px-2 py-2 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                  <td class="px-2 py-2 text-center">60</td>
+                </tr>
+                <tr class="hover:bg-slate-50/50">
+                  <td class="px-4 py-2 font-medium text-slate-900">200</td>
+                  <td class="px-2 py-2 text-center border-l border-slate-100 text-green-600"><i
+                      class="fa-solid fa-check"></i></td>
+                  <td class="px-2 py-2 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                  <td class="px-2 py-2 text-center">30</td>
+                  <td class="px-2 py-2 text-center border-l border-slate-100 text-green-600"><i
+                      class="fa-solid fa-check"></i></td>
+                  <td class="px-2 py-2 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                  <td class="px-2 py-2 text-center">40</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Table 2: Beuteldurchmesser 105 mm -->
+        <div class="overflow-hidden rounded-xl border border-slate-200">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-sm text-slate-600">
+              <thead class="bg-slate-50 text-xs uppercase text-slate-500 border-b border-slate-200">
+                <tr>
+                  <th colspan="7" class="px-4 py-3 font-semibold text-slate-900 bg-slate-100 text-sm">Beuteldurchmesser
+                    105 mm</th>
+                </tr>
+                <tr>
+                  <th class="px-4 py-3 font-semibold align-bottom">Maschenweite µm</th>
+                  <th colspan="3" class="px-4 py-3 font-semibold text-center border-l border-slate-200">D=105 mm x L=380
+                    mm</th>
+                  <th colspan="3" class="px-4 py-3 font-semibold text-center border-l border-slate-200">D=105 mm x L=230
+                    mm</th>
+                </tr>
+                <tr>
+                  <th class="px-4 py-3 font-semibold border-t border-slate-200"></th>
+                  <th class="px-2 py-3 font-semibold text-center border-t border-slate-200 border-l border-slate-200">
+                    Einzel</th>
+                  <th class="px-2 py-3 font-semibold text-center border-t border-slate-200">Karton</th>
+                  <th class="px-2 py-3 font-semibold text-center border-t border-slate-200">Inhalt</th>
+                  <th class="px-2 py-3 font-semibold text-center border-t border-slate-200 border-l border-slate-200">
+                    Einzel</th>
+                  <th class="px-2 py-3 font-semibold text-center border-t border-slate-200">Karton</th>
+                  <th class="px-2 py-3 font-semibold text-center border-t border-slate-200">Inhalt</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100">
+                <!-- Polyamid 6.6 Monofilgewebe -->
+                <tr class="bg-slate-50/30">
+                  <td colspan="7" class="px-4 py-2 text-xs font-bold uppercase text-slate-500 bg-slate-100/50">Polyamid
+                    6.6 Monofilgewebe</td>
+                </tr>
+                <tr class="hover:bg-slate-50/50">
+                  <td class="px-4 py-2 font-medium text-slate-900">25 - 1000</td>
+                  <td class="px-2 py-2 text-center border-l border-slate-100 text-green-600"><i
+                      class="fa-solid fa-check"></i></td>
+                  <td class="px-2 py-2 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                  <td class="px-2 py-2 text-center">50</td>
+                  <td class="px-2 py-2 text-center border-l border-slate-100 text-green-600"><i
+                      class="fa-solid fa-check"></i></td>
+                  <td class="px-2 py-2 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                  <td class="px-2 py-2 text-center">50</td>
+                </tr>
+
+                <!-- Polyester Monofilgewebe -->
+                <tr class="bg-slate-50/30">
+                  <td colspan="7"
+                    class="px-4 py-2 text-xs font-bold uppercase text-slate-500 bg-slate-100/50 border-t border-slate-100">
+                    Polyester Monofilgewebe</td>
+                </tr>
+                <tr class="hover:bg-slate-50/50">
+                  <td class="px-4 py-2 font-medium text-slate-900">50 - 1000</td>
+                  <td class="px-2 py-2 text-center border-l border-slate-100 text-green-600"><i
+                      class="fa-solid fa-check"></i></td>
+                  <td class="px-2 py-2 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                  <td class="px-2 py-2 text-center">50</td>
+                  <td class="px-2 py-2 text-center border-l border-slate-100 text-green-600"><i
+                      class="fa-solid fa-check"></i></td>
+                  <td class="px-2 py-2 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                  <td class="px-2 py-2 text-center">50</td>
+                </tr>
+
+                <!-- Polyester Nadelfilz -->
+                <tr class="bg-slate-50/30">
+                  <td colspan="7"
+                    class="px-4 py-2 text-xs font-bold uppercase text-slate-500 bg-slate-100/50 border-t border-slate-100">
+                    Polyester Nadelfilz</td>
+                </tr>
+                <tr class="hover:bg-slate-50/50">
+                  <td class="px-4 py-2 font-medium text-slate-900">1 - 200</td>
+                  <td class="px-2 py-2 text-center border-l border-slate-100 text-green-600"><i
+                      class="fa-solid fa-check"></i></td>
+                  <td class="px-2 py-2 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                  <td class="px-2 py-2 text-center">50</td>
+                  <td class="px-2 py-2 text-center border-l border-slate-100 text-green-600"><i
+                      class="fa-solid fa-check"></i></td>
+                  <td class="px-2 py-2 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                  <td class="px-2 py-2 text-center">50</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="border-t border-slate-200 bg-slate-50 p-4 text-xs text-slate-500 space-y-2">
+            <ul class="flex flex-wrap gap-4 list-disc list-inside">
+              <li><span class="font-medium text-slate-700"><i class="fa-solid fa-check text-green-600"></i></span> =
+                standardmäßig lieferbar</li>
+              <li><span class="font-medium text-slate-700">-</span> = nicht standardmäßig lieferbar</li>
+            </ul>
+            <p class="italic text-slate-400">
+              Oben aufgeführt sind ausschließlich unsere Standardabmessungen. Sollten Sie Filterbeutel mit anderen
+              Abmessungen oder anderen Materialien benötigen bitten wir Sie diese bei uns anzufragen.
+            </p>
+          </div>
+        </div>
+      </section>
+    </template>
+    <template id="tpl-filterkerzen">
+      <!-- Filterkerzen Standardabmessungen -->
+      <section>
+        <div class="flex items-center gap-3 mb-4">
+          <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-orange-50 text-brand-orange">
+            <i class="fa-solid fa-ruler-combined text-sm"></i>
+          </span>
+          <h3 class="text-lg font-bold text-slate-900">Lieferbarkeit Filterkerzen Standardabmessungen</h3>
+        </div>
+
+        <!-- Table 1: FKC -->
+        <div class="mb-4">
+          <h4 class="text-md font-bold text-slate-900 mb-2">FKC</h4>
+          <p class="text-sm text-slate-600 mb-2">Diese Tiefenfilterelemente bestehen aus langen Acrylfasern, die mit
+            Phenolharz gebunden werden. Durch die Harzverfestigung benötigen die Kerzen keinen Stützkern. FKC-Kerzen
+            sind silikonfrei.</p>
+          <p class="text-sm font-semibold text-slate-700 mb-3">Durchmesser: AD 65 mm / ID 28 mm</p>
+        </div>
+        <div class="overflow-hidden rounded-xl border border-slate-200 mb-8">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-sm text-slate-600">
+              <thead class="bg-slate-50 text-xs uppercase text-slate-500 border-b border-slate-200">
+                <tr>
+                  <th class="px-4 py-3 font-semibold align-bottom">Länge</th>
+                  <th colspan="7" class="px-4 py-3 font-semibold text-center border-l border-slate-200">Filterfeinheit
+                    (Mikron nominal)</th>
+                </tr>
+                <tr>
+                  <th class="px-4 py-3 font-semibold border-t border-slate-200"></th>
+                  <th class="px-2 py-3 font-semibold text-center border-t border-slate-200 border-l border-slate-200">2
+                  </th>
+                  <th class="px-2 py-3 font-semibold text-center border-t border-slate-200">5</th>
+                  <th class="px-2 py-3 font-semibold text-center border-t border-slate-200">10</th>
+                  <th class="px-2 py-3 font-semibold text-center border-t border-slate-200">25</th>
+                  <th class="px-2 py-3 font-semibold text-center border-t border-slate-200">50</th>
+                  <th class="px-2 py-3 font-semibold text-center border-t border-slate-200">125</th>
+                  <th class="px-2 py-3 font-semibold text-center border-t border-slate-200">150</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100">
+                <!-- Grid items -->
+                <tr class="hover:bg-slate-50/50">
+                  <td class="px-4 py-2 font-medium text-slate-900">9 3/4"</td>
+                  <td class="px-2 py-2 text-center border-l border-slate-100 text-green-600"><i
+                      class="fa-solid fa-check"></i></td>
+                  <td class="px-2 py-2 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                  <td class="px-2 py-2 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                  <td class="px-2 py-2 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                  <td class="px-2 py-2 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                  <td class="px-2 py-2 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                  <td class="px-2 py-2 text-center text-green-600"><i class="fa-solid fa-check"></i></td>
+                </tr>
+                <tr class="hover:bg-slate-50/50">
+                  <td class="px-4 py-2 font-medium text-slate-900">10" - 40"</td>
+                  <td colspan="7" class="px-4 py-2 text-center text-slate-500 italic border-l border-slate-100">alle
+                    Standardlängen lieferbar (10", 19 1/2", 20", 29 1/4", 30", 39", 40")</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Table 2: FKW -->
+        <div class="mb-4">
+          <h4 class="text-md font-bold text-slate-900 mb-2">FKW</h4>
+          <p class="text-sm text-slate-600 mb-2">Wickelfilterkerzen sind Tiefenfilterelemente, bei denen ein Garn um
+            einen Stützkern gewickelt wird. Durch die angebotene Materialvielfalt von Garn und Stützkern ist die Kerze
+            für eine Vielzahl von Anwendungen geeignet.</p>
+          <p class="text-sm text-slate-600 mb-2"><strong>Wickelmaterial:</strong> gebleichte Baumwolle / Glasfaser
+            therm. entschlichtet / Polypropylen / Polypropylen gewaschen</p>
+          <p class="text-sm text-slate-600 mb-2"><strong>Material Stützkern:</strong> Polypropylen / Edelstahl (1.4401)
+            / Weißblech</p>
+          <p class="text-sm font-semibold text-slate-700 mb-3">Durchmesser: AD 62 mm / ID 28 mm</p>
+        </div>
+        <div class="overflow-hidden rounded-xl border border-slate-200 mb-8">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-sm text-slate-600">
+              <thead class="bg-slate-50 text-xs uppercase text-slate-500 border-b border-slate-200">
+                <tr>
+                  <th class="px-4 py-3 font-semibold align-bottom">Länge</th>
+                  <th colspan="10" class="px-4 py-3 font-semibold text-center border-l border-slate-200">Filterfeinheit
+                    (Mikron nominal)</th>
+                </tr>
+                <tr>
+                  <th class="px-4 py-3 font-semibold border-t border-slate-200"></th>
+                  <th class="px-2 py-3 font-semibold text-center border-t border-slate-200 border-l border-slate-200">
+                    0,5</th>
+                  <th class="px-2 py-3 font-semibold text-center border-t border-slate-200">1</th>
+                  <th class="px-2 py-3 font-semibold text-center border-t border-slate-200">3</th>
+                  <th class="px-2 py-3 font-semibold text-center border-t border-slate-200">5</th>
+                  <th class="px-2 py-3 font-semibold text-center border-t border-slate-200">10</th>
+                  <th class="px-2 py-3 font-semibold text-center border-t border-slate-200">25</th>
+                  <th class="px-2 py-3 font-semibold text-center border-t border-slate-200">50</th>
+                  <th class="px-2 py-3 font-semibold text-center border-t border-slate-200">75</th>
+                  <th class="px-2 py-3 font-semibold text-center border-t border-slate-200">100</th>
+                  <th class="px-2 py-3 font-semibold text-center border-t border-slate-200">150</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100">
+                <tr class="hover:bg-slate-50/50">
+                  <td class="px-4 py-2 font-medium text-slate-900">5" - 40"</td>
+                  <td colspan="10" class="px-4 py-2 text-center text-slate-500 italic border-l border-slate-100">alle
+                    Standardlängen lieferbar (5", 9 3/4", 10", 19 1/2", 20", 29 1/4", 30", 39", 40")</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Table 3: FK-GX -->
+        <div class="mb-4">
+          <h4 class="text-md font-bold text-slate-900 mb-2">FK-GX</h4>
+          <p class="text-sm text-slate-600 mb-2">Diese Tiefenfilter bestehen aus reinem Polypropylenmikrofasern, die im
+            Melt-blown Verfahren thermisch gebunden werden. Die Kerzen besitzen keinen Stützkern, sind absolut frei von
+            Bindemitteln und entsprechen den FDA Anforderungen.</p>
+          <p class="text-sm font-semibold text-slate-700 mb-3">Durchmesser: AD 64 mm / ID 28 mm</p>
+        </div>
+        <div class="overflow-hidden rounded-xl border border-slate-200 mb-8">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-sm text-slate-600">
+              <thead class="bg-slate-50 text-xs uppercase text-slate-500 border-b border-slate-200">
+                <tr>
+                  <th class="px-4 py-3 font-semibold align-bottom">Länge</th>
+                  <th colspan="8" class="px-4 py-3 font-semibold text-center border-l border-slate-200">Filterfeinheit
+                    (Mikron nominal)</th>
+                </tr>
+                <tr>
+                  <th class="px-4 py-3 font-semibold border-t border-slate-200"></th>
+                  <th class="px-2 py-3 font-semibold text-center border-t border-slate-200 border-l border-slate-200">1
+                  </th>
+                  <th class="px-2 py-3 font-semibold text-center border-t border-slate-200">3</th>
+                  <th class="px-2 py-3 font-semibold text-center border-t border-slate-200">5</th>
+                  <th class="px-2 py-3 font-semibold text-center border-t border-slate-200">10</th>
+                  <th class="px-2 py-3 font-semibold text-center border-t border-slate-200">20</th>
+                  <th class="px-2 py-3 font-semibold text-center border-t border-slate-200">30</th>
+                  <th class="px-2 py-3 font-semibold text-center border-t border-slate-200">50</th>
+                  <th class="px-2 py-3 font-semibold text-center border-t border-slate-200">75</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100">
+                <tr class="hover:bg-slate-50/50">
+                  <td class="px-4 py-2 font-medium text-slate-900">5" - 40"</td>
+                  <td colspan="8" class="px-4 py-2 text-center text-slate-500 italic border-l border-slate-100">alle
+                    Standardlängen lieferbar (5", 9 3/4", 10", 19 1/2", 20", 29 1/4", 30", 39", 40")</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Table 4: FKT-A -->
+        <div class="mb-4">
+          <h4 class="text-md font-bold text-slate-900 mb-2">FKT-A</h4>
+          <p class="text-sm text-slate-600 mb-2">Diese Filterkerzen bestehen aus hochreinem Polypropylenfasern, die auf
+            einen Stützkern aufgeblasen und gleichzeitig thermisch verbunden werden. Als Absolutfilterkerzen weisen
+            FKT-A Kerzen einen Abscheidegrad > 99,98% auf. Sie entsprechen den FDA-Anforderungen und sind silikonfrei.
+          </p>
+          <p class="text-sm font-semibold text-slate-700 mb-3">Durchmesser: AD 64 mm / ID 27 mm</p>
+        </div>
+        <div class="overflow-hidden rounded-xl border border-slate-200 mb-8">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-sm text-slate-600">
+              <thead class="bg-slate-50 text-xs uppercase text-slate-500 border-b border-slate-200">
+                <tr>
+                  <th class="px-4 py-3 font-semibold align-bottom">Länge</th>
+                  <th colspan="11" class="px-4 py-3 font-semibold text-center border-l border-slate-200">Filterfeinheit
+                    (Mikron nominal)</th>
+                </tr>
+                <tr>
+                  <th class="px-4 py-3 font-semibold border-t border-slate-200"></th>
+                  <th class="px-2 py-3 font-semibold text-center border-t border-slate-200 border-l border-slate-200">
+                    0,5</th>
+                  <th class="px-2 py-3 font-semibold text-center border-t border-slate-200">1</th>
+                  <th class="px-2 py-3 font-semibold text-center border-t border-slate-200">3</th>
+                  <th class="px-2 py-3 font-semibold text-center border-t border-slate-200">5</th>
+                  <th class="px-2 py-3 font-semibold text-center border-t border-slate-200">10</th>
+                  <th class="px-2 py-3 font-semibold text-center border-t border-slate-200">20</th>
+                  <th class="px-2 py-3 font-semibold text-center border-t border-slate-200">30</th>
+                  <th class="px-2 py-3 font-semibold text-center border-t border-slate-200">50</th>
+                  <th class="px-2 py-3 font-semibold text-center border-t border-slate-200">70</th>
+                  <th class="px-2 py-3 font-semibold text-center border-t border-slate-200">90</th>
+                  <th class="px-2 py-3 font-semibold text-center border-t border-slate-200">120</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100">
+                <tr class="hover:bg-slate-50/50">
+                  <td class="px-4 py-2 font-medium text-slate-900">5" - 40"</td>
+                  <td colspan="11" class="px-4 py-2 text-center text-slate-500 italic border-l border-slate-100">alle
+                    Standardlängen lieferbar (5", 10", 20", 30", 40")</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Ausführungen -->
+        <div class="mb-8">
+          <h4 class="text-md font-bold text-slate-900 mb-2">Ausführungen</h4>
+          <ul class="list-disc list-inside text-sm text-slate-600 space-y-1">
+            <li>DOE (Standard) Polypropylen Flachdichtungen (DOE = beidseitig offen)</li>
+            <li>SOE 222-O Ringe / Speer (SOE = einseitig offen)</li>
+            <li>SOE 226-O Ringe / Bajonett, Speer (SOE = einseitig offen)</li>
+            <li>SOE 222-O Ringe / flach (SOE = einseitig offen)</li>
+          </ul>
+        </div>
+
+      </section>
+    </template>
 </body>
 
+<script src="js/flyout.js"></script>
 <script src="js/components.js"></script>
 
 </html>
