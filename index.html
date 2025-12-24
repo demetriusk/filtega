@@ -30,39 +30,7 @@
       },
     };
   </script>
-  <style>
-    html {
-      font-size: 18px;
-    }
-
-    /* 16px → 18px globally */
-    .privacy-box {
-      position: relative;
-      display: inline-flex;
-      width: 1rem;
-      height: 1rem;
-      flex-shrink: 0;
-      border-radius: 0.4rem;
-      background: #ea8323;
-      /* brand orange */
-    }
-
-    /* white tick when checked */
-    .privacy-input:checked+.privacy-box::after {
-      content: "";
-      position: absolute;
-      inset: 0.18rem 0.22rem 0.2rem 0.3rem;
-      border-right: 2px solid #ffffff;
-      border-bottom: 2px solid #ffffff;
-      transform: rotate(45deg);
-    }
-
-    /* focus outline for keyboard users */
-    .privacy-input:focus-visible+.privacy-box {
-      outline: 2px solid rgba(233, 131, 34, 0.75);
-      outline-offset: 2px;
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body class="bg-white text-slate-900 font-sans antialiased">
