@@ -527,43 +527,42 @@
 
 
 
-</body>
+  <script src="js/flyout.js"></script>
 
-<script src="js/flyout.js"></script>
+  <!-- Dynamic Side Modal -->
+  <div id="dynamicModal" class="fixed inset-0 z-[60] hidden" aria-labelledby="modal-title" role="dialog"
+    aria-modal="true">
+    <!-- Backdrop -->
+    <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity duration-500 opacity-0"
+      id="modalBackdrop" onclick="closeModal()"></div>
 
-<!-- Dynamic Side Modal -->
-<div id="dynamicModal" class="fixed inset-0 z-[60] hidden" aria-labelledby="modal-title" role="dialog"
-  aria-modal="true">
-  <!-- Backdrop -->
-  <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity duration-500 opacity-0"
-    id="modalBackdrop" onclick="closeModal()"></div>
+    <!-- Slide-out Panel -->
+    <div class="absolute inset-y-0 right-0 flex max-w-full pl-0 sm:pl-10 pointer-events-none">
+      <div
+        class="pointer-events-auto relative w-screen max-w-2xl transform transition-transform duration-500 translate-x-full"
+        id="modalPanel">
+        <div class="flex h-full flex-col bg-white shadow-2xl">
+          <!-- Header -->
+          <div class="flex items-center justify-between border-b border-slate-100 px-6 py-4 sm:px-8">
+            <h2 class="text-xl font-bold text-slate-900" id="modal-title">Standardabmessungen</h2>
+            <button type="button"
+              class="rounded-full p-2 text-slate-400 transition hover:bg-slate-100 hover:text-slate-600"
+              onclick="closeModal()">
+              <span class="sr-only">Schließen</span>
+              <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+          </div>
 
-  <!-- Slide-out Panel -->
-  <div class="absolute inset-y-0 right-0 flex max-w-full pl-0 sm:pl-10 pointer-events-none">
-    <div
-      class="pointer-events-auto relative w-screen max-w-2xl transform transition-transform duration-500 translate-x-full"
-      id="modalPanel">
-      <div class="flex h-full flex-col bg-white shadow-2xl">
-        <!-- Header -->
-        <div class="flex items-center justify-between border-b border-slate-100 px-6 py-4 sm:px-8">
-          <h2 class="text-xl font-bold text-slate-900" id="modal-title">Standardabmessungen</h2>
-          <button type="button"
-            class="rounded-full p-2 text-slate-400 transition hover:bg-slate-100 hover:text-slate-600"
-            onclick="closeModal()">
-            <span class="sr-only">Schließen</span>
-            <i class="fa-solid fa-xmark text-xl"></i>
-          </button>
-        </div>
-
-        <!-- Dynamic Content Container -->
-        <div id="modalContent" class="flex-1 overflow-y-auto px-6 py-6 sm:px-8 space-y-10">
-          <!-- Content will be injected here -->
+          <!-- Dynamic Content Container -->
+          <div id="modalContent" class="flex-1 overflow-y-auto px-6 py-6 sm:px-8 space-y-10">
+            <!-- Content will be injected here -->
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-<script src="js/components.js"></script>
+  <script src="js/components.js"></script>
+</body>
 
 </html>
