@@ -32,12 +32,20 @@ class SiteHeader extends HTMLElement {
   initMobileMenu() {
     const mobileToggle = this.querySelector('#mobileToggle');
     const mobileMenu = this.querySelector('#mobileMenu');
+
     if (mobileToggle && mobileMenu) {
-      mobileToggle.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-      });
+      const toggleMenu = () => {
+        const isHidden = mobileMenu.classList.toggle('hidden');
+        document.body.style.overflow = isHidden ? '' : 'hidden';
+      };
+
+      mobileToggle.addEventListener('click', toggleMenu);
+
       mobileMenu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          document.body.style.overflow = '';
+        });
       });
     }
   }
