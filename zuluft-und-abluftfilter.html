@@ -507,24 +507,7 @@
     <site-footer></site-footer>
   </main>
 
-  <script>
 
-
-    // Scroll animations
-    const animated = document.querySelectorAll('.js-animate');
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.remove('opacity-0', 'translate-y-10');
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.14, rootMargin: '0px 0px -60px 0px' }
-    );
-    animated.forEach((el) => observer.observe(el));
-  </script>
 
 
   <script>

@@ -104,3 +104,38 @@ html {
     outline: 2px solid rgba(233, 131, 34, .75);
     outline-offset: 2px;
 }
+
+/* Read More Toggle for Prose */
+.prose-collapsed {
+    max-height: 400px;
+    overflow: hidden;
+    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+}
+
+.prose-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    /* text-sm */
+    font-weight: 600;
+    color: #ea8323;
+    /* brand-orange */
+    cursor: pointer;
+    transition: color 0.15s ease;
+}
+
+.prose-toggle:hover {
+    color: #c26a1b;
+    /* darker orange */
+}
+
+.prose-toggle .fa-chevron-down {
+    transition: transform 0.3s ease;
+}
+
+.prose-toggle.expanded .fa-chevron-down {
+    transform: rotate(180deg);
+}

@@ -69,3 +69,55 @@ class ContactSection extends HTMLElement {
   }
 }
 customElements.define('contact-section', ContactSection);
+
+// Initialize Read More toggles for prose blocks
+function initReadMoreToggles() {
+  const proseBlocks = document.querySelectorAll('.prose');
+
+  proseBlocks.forEach(prose => {
+    // Check if height exceeds 400px (approx 22rem)
+    if (prose.scrollHeight > 400) {
+      // Add collapsed class
+      prose.classList.add('prose-collapsed');
+
+      // Create toggle button
+      const toggleBtn = document.createElement('div');
+      toggleBtn.className = 'prose-toggle';
+      toggleBtn.innerHTML = `
+          <span>Mehr anzeigen</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        `;
+
+      // Insert after prose block
+      if (prose.parentNode) {
+        prose.parentNode.insertBefore(toggleBtn, prose.nextSibling);
+      }
+
+      // Add click event
+      toggleBtn.addEventListener('click', () => {
+        const isCollapsed = prose.classList.contains('prose-collapsed');
+
+        if (isCollapsed) {
+          prose.classList.remove('prose-collapsed');
+          toggleBtn.classList.add('expanded');
+          toggleBtn.querySelector('span').textContent = 'Weniger anzeigen';
+        } else {
+          prose.classList.add('prose-collapsed');
+          toggleBtn.classList.remove('expanded');
+          toggleBtn.querySelector('span').textContent = 'Mehr anzeigen';
+          // Smooth scroll back to top of content if needed? 
+          // prose.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    }
+  });
+}
+
+// Run initialization when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+  // Small timeout to ensure styles and layout calculate height correctly
+  setTimeout(() => {
+    initReadMoreToggles();
+    initComponentAnimations(document);
+  }, 100);
+});
