@@ -26,6 +26,10 @@
     margin-top: 0;
 }
 
+.prose> :last-child {
+    margin-bottom: 0;
+}
+
 /* Specific heading sizes for .prose context */
 .prose h3 {
     font-size: 1.25rem;
@@ -118,7 +122,6 @@ html {
     align-items: center;
     gap: 0.5rem;
     margin-bottom: 1rem;
-    margin-top: 1rem;
     font-size: 0.875rem;
     /* text-sm */
     font-weight: 600;
