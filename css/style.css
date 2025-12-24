@@ -111,7 +111,7 @@ html {
 
 /* Read More Toggle for Prose */
 .prose-collapsed {
-    max-height: 300px;
+    max-height: 340px;
     overflow: hidden;
     mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
     -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);

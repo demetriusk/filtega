@@ -75,8 +75,7 @@ function initReadMoreToggles() {
   const proseBlocks = document.querySelectorAll('.prose');
 
   proseBlocks.forEach(prose => {
-    // Check if height exceeds 300px (approx 22rem)
-    if (prose.scrollHeight > 300) {
+    if (prose.scrollHeight > 340) {
       // Add collapsed class
       prose.classList.add('prose-collapsed');
 
