@@ -417,47 +417,118 @@
         </p>
       </div>
 
-      <div class="overflow-x-auto">
-        <table
-          class="js-animate w-full border-collapse text-[0.8rem] opacity-0 translate-y-10 transition duration-700 delay-100">
-          <thead>
-            <tr class="border-b border-zinc-800 text-[0.7rem] uppercase tracking-[0.12em] text-zinc-400">
-              <th class="py-3 text-left">Metrik</th>
-              <th class="py-3 text-left">Standard Glasfaser (20")</th>
-              <th class="py-3 text-left">Columbus / High Cap</th>
-              <th class="py-3 text-left">Vorteil</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="border-b border-zinc-800/80">
-              <td class="py-3 font-medium text-zinc-100">Aufnahmekapazität</td>
-              <td class="py-3 text-zinc-200">ca. 3–5&nbsp;kg/m²</td>
-              <td class="py-3 font-semibold text-orange-400">bis zu 18&nbsp;kg/m²</td>
-              <td class="py-3 text-zinc-200">Längere Laufzeit</td>
-            </tr>
-            <tr class="border-b border-zinc-800/80">
-              <td class="py-3 font-medium text-zinc-100">Druckverlust (Anfang)</td>
-              <td class="py-3 text-zinc-200">15–30&nbsp;Pa</td>
-              <td class="py-3 text-zinc-200">10–20&nbsp;Pa</td>
-              <td class="py-3 text-zinc-200">Energieeffizienz</td>
-            </tr>
-            <tr class="border-b border-zinc-800/80">
-              <td class="py-3 font-medium text-zinc-100">Transportvolumen</td>
-              <td class="py-3 text-zinc-200">100&nbsp;% (Referenz)</td>
-              <td class="py-3 font-semibold text-orange-400">25&nbsp;% (komprimiert)</td>
-              <td class="py-3 text-zinc-200">75&nbsp;% Lagerersparnis</td>
-            </tr>
-            <tr>
-              <td class="py-3 font-medium text-zinc-100">Filterklasse (ISO 16890)</td>
-              <td class="py-3 text-zinc-200">Coarse 50–60&nbsp;%</td>
-              <td class="py-3 text-zinc-200">ePM10 50&nbsp;%</td>
-              <td class="py-3 text-zinc-200">Sauberere Abluft</td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="js-animate grid gap-6 md:grid-cols-3 opacity-0 translate-y-10 transition duration-700 delay-100">
+        <!-- Card 1 -->
+        <article
+          class="flex flex-col rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition hover:bg-white/10">
+          <h3 class="mb-4 text-lg font-semibold text-brand-orange">Staubaufnahme</h3>
+          <ul class="mb-6 space-y-3 text-sm text-slate-300">
+            <li class="flex gap-3">
+              <i class="fa-solid fa-check mt-1 text-brand-orange text-xs"></i>
+              <span>Deutlich höhere Staubaufnahme</span>
+            </li>
+            <li class="flex gap-3">
+              <i class="fa-solid fa-check mt-1 text-brand-orange text-xs"></i>
+              <span>Mehrere Absatzkammern statt flacher Filterfläche</span>
+            </li>
+            <li class="flex gap-3">
+              <i class="fa-solid fa-check mt-1 text-brand-orange text-xs"></i>
+              <span>Farbe lagert sich kontrolliert ab, der Luftstrom bleibt frei</span>
+            </li>
+            <li class="flex gap-3">
+              <i class="fa-solid fa-check mt-1 text-brand-orange text-xs"></i>
+              <span>Filter wird erst gewechselt, wenn er wirklich „voll“ ist</span>
+            </li>
+          </ul>
+          <div class="mt-auto border-t border-white/10 pt-4">
+            <div class="mb-2 text-xs font-semibold uppercase tracking-wider text-slate-400">Ergebnis:</div>
+            <ul class="space-y-2 text-sm font-medium text-white">
+              <li class="flex gap-2 items-center">
+                <i class="fa-solid fa-check text-green-400 text-xs"></i>
+                <span>längere Standzeiten</span>
+              </li>
+              <li class="flex gap-2 items-center">
+                <i class="fa-solid fa-check text-green-400 text-xs"></i>
+                <span>weniger Filterwechsel</span>
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article
+          class="flex flex-col rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition hover:bg-white/10">
+          <h3 class="mb-4 text-lg font-semibold text-brand-orange">Luftstrom &amp; Energie</h3>
+          <ul class="mb-6 space-y-3 text-sm text-slate-300">
+            <li class="flex gap-3">
+              <i class="fa-solid fa-check mt-1 text-brand-orange text-xs"></i>
+              <span>Gleichmäßiger Luftstrom</span>
+            </li>
+            <li class="flex gap-3">
+              <i class="fa-solid fa-check mt-1 text-brand-orange text-xs"></i>
+              <span>Keine Umlenkung der Luft</span>
+            </li>
+            <li class="flex gap-3">
+              <i class="fa-solid fa-check mt-1 text-brand-orange text-xs"></i>
+              <span>Kein frühzeitiger Druckanstieg</span>
+            </li>
+            <li class="flex gap-3">
+              <i class="fa-solid fa-check mt-1 text-brand-orange text-xs"></i>
+              <span>Konstantere Anlagenleistung</span>
+            </li>
+          </ul>
+          <div class="mt-auto border-t border-white/10 pt-4">
+            <div class="mb-2 text-xs font-semibold uppercase tracking-wider text-slate-400">Ergebnis:</div>
+            <ul class="space-y-2 text-sm font-medium text-white">
+              <li class="flex gap-2 items-center">
+                <i class="fa-solid fa-check text-green-400 text-xs"></i>
+                <span>stabiler Betrieb</span>
+              </li>
+              <li class="flex gap-2 items-center">
+                <i class="fa-solid fa-check text-green-400 text-xs"></i>
+                <span>geringerer Energiebedarf</span>
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article
+          class="flex flex-col rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition hover:bg-white/10">
+          <h3 class="mb-4 text-lg font-semibold text-brand-orange">Logistik &amp; Kosten</h3>
+          <ul class="mb-6 space-y-3 text-sm text-slate-300">
+            <li class="flex gap-3">
+              <i class="fa-solid fa-check mt-1 text-brand-orange text-xs"></i>
+              <span>Weniger Volumen, weniger Kosten</span>
+            </li>
+            <li class="flex gap-3">
+              <i class="fa-solid fa-check mt-1 text-brand-orange text-xs"></i>
+              <span>Kartonfilter werden komprimiert geliefert</span>
+            </li>
+            <li class="flex gap-3">
+              <i class="fa-solid fa-check mt-1 text-brand-orange text-xs"></i>
+              <span>Deutlich reduziertes Transport- und Lagervolumen</span>
+            </li>
+          </ul>
+          <div class="mt-auto border-t border-white/10 pt-4">
+            <div class="mb-2 text-xs font-semibold uppercase tracking-wider text-slate-400">Ergebnis:</div>
+            <ul class="space-y-2 text-sm font-medium text-white">
+              <li class="flex gap-2 items-center">
+                <i class="fa-solid fa-check text-green-400 text-xs"></i>
+                <span>geringere Logistikkosten</span>
+              </li>
+              <li class="flex gap-2 items-center">
+                <i class="fa-solid fa-check text-green-400 text-xs"></i>
+                <span>bis zu 75 % weniger Filterkosten*</span>
+              </li>
+            </ul>
+          </div>
+        </article>
       </div>
-      <p class="js-animate mt-3 text-[0.7rem] text-zinc-500 opacity-0 translate-y-10 transition duration-700 delay-200">
-        *Werte basieren auf Labortests mit Standardlack (High Solid). Realwerte abhängig von Lacktyp.
+
+      <p
+        class="js-animate mt-6 text-[0.7rem] text-slate-400 opacity-0 translate-y-10 transition duration-700 delay-300">
+        * abhängig von Anlage, Lacktyp und Einsatzbedingungen
       </p>
     </div>
   </section>
