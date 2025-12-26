@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <title>Vielen Dank – Filtega</title>
+    <meta name="robots" content="noindex, nofollow" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            orange: '#ea8323',
+                            blue: '#304670',
+                            purple: '#323485'
+                        },
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="bg-white text-slate-900 font-sans antialiased flex flex-col min-h-screen">
+    <!-- Header -->
+    <site-header></site-header>
+
+    <!-- Hero / Content -->
+    <main class="flex-grow flex items-center justify-center">
+        <section class="px-6 py-24 text-center">
+            <div class="mx-auto max-w-2xl">
+                <!-- Icon -->
+                <div
+                    class="js-animate mx-auto mb-8 flex h-24 w-24 items-center justify-center rounded-full bg-green-100 text-4xl text-green-600 shadow-sm opacity-0 translate-y-10 transition duration-700">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+
+                <h1
+                    class="js-animate mb-6 text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl opacity-0 translate-y-10 transition duration-700 delay-100">
+                    Vielen Dank!
+                </h1>
+
+                <p
+                    class="js-animate mb-10 text-lg leading-relaxed text-slate-600 opacity-0 translate-y-10 transition duration-700 delay-200">
+                    Ihre Anfrage wurde erfolgreich an uns übermittelt. <br class="hidden sm:block" />
+                    Wir werden uns schnellstmöglich bei Ihnen melden.
+                </p>
+
+                <div
+                    class="js-animate flex flex-wrap justify-center gap-4 opacity-0 translate-y-10 transition duration-700 delay-300">
+                    <a href="/"
+                        class="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-8 py-3.5 text-sm font-semibold text-slate-900 shadow-sm transition hover:bg-slate-50">
+                        <i class="fa-solid fa-arrow-left text-xs"></i>
+                        Zurück zur Startseite
+                    </a>
+                    <a href="/pdf/Katalog.pdf" target="_blank"
+                        class="inline-flex items-center gap-2 rounded-full bg-brand-orange px-8 py-3.5 text-sm font-semibold text-white shadow-lg transition hover:bg-orange-600">
+                        <i class="fa-solid fa-file-pdf text-xs"></i>
+                        Katalog ansehen
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <site-footer></site-footer>
+
+    <script src="js/components.js"></script>
+</body>
+
+</html>
