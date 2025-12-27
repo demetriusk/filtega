@@ -25,6 +25,7 @@ class SiteHeader extends HTMLElement {
       .then(data => {
         this.innerHTML = data;
         this.initMobileMenu();
+        this.highlightActiveLinks();
       })
       .catch(err => console.error('Error loading header:', err));
   }
@@ -48,6 +49,43 @@ class SiteHeader extends HTMLElement {
         });
       });
     }
+  }
+
+  highlightActiveLinks() {
+    const currentPath = window.location.pathname.replace(/\/$/, "").replace(/\.html$/, "");
+    const links = this.querySelectorAll("nav a, #mobileMenu a");
+
+    links.forEach((link) => {
+      try {
+        const url = new URL(link.href);
+        // Only checking internal links
+        if (url.origin === window.location.origin) {
+          const linkPath = url.pathname.replace(/\/$/, "").replace(/\.html$/, "");
+
+          // Check if paths match
+          if (linkPath === currentPath) {
+            // Check for H4 title (dropdown/mobile items)
+            const title = link.querySelector("h4");
+            if (title) {
+              title.classList.remove("text-slate-900");
+              title.classList.add("text-brand-orange");
+            } else {
+              // Top-level links (only if not an anchor link on the same page, usually)
+              // But strictly speaking, if path matches, it is active.
+              // However simple anchor links like /#welten have path / which matches home /
+              // If we are on home /, we might highlight all anchors? 
+              // Usually we only highlight if it's the main link.
+              // For "Produkte" (button), we can't highlight it easily.
+              // For standard links without H4:
+              link.classList.remove("text-slate-800/80");
+              link.classList.add("text-brand-orange");
+            }
+          }
+        }
+      } catch (e) {
+        console.error("Error parsing link URL", e);
+      }
+    });
   }
 }
 customElements.define('site-header', SiteHeader);
