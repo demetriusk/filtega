@@ -62,21 +62,16 @@ class SiteHeader extends HTMLElement {
         if (url.origin === window.location.origin) {
           const linkPath = url.pathname.replace(/\/$/, "").replace(/\.html$/, "");
 
-          // Check if paths match
-          if (linkPath === currentPath) {
+          // Check if paths match, but EXCLUDE links with hashes (anchors on the same page)
+          // unless you specifically want to handle scrollspy separately.
+          // This prevents "Einsatzbereiche" (/#welten) from being orange on home page.
+          if (linkPath === currentPath && !url.hash) {
             // Check for H4 title (dropdown/mobile items)
             const title = link.querySelector("h4");
             if (title) {
               title.classList.remove("text-slate-900");
               title.classList.add("text-brand-orange");
             } else {
-              // Top-level links (only if not an anchor link on the same page, usually)
-              // But strictly speaking, if path matches, it is active.
-              // However simple anchor links like /#welten have path / which matches home /
-              // If we are on home /, we might highlight all anchors? 
-              // Usually we only highlight if it's the main link.
-              // For "Produkte" (button), we can't highlight it easily.
-              // For standard links without H4:
               link.classList.remove("text-slate-800/80");
               link.classList.add("text-brand-orange");
             }
