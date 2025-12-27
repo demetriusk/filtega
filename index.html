@@ -189,20 +189,24 @@
     <div class="mx-auto max-w-5xl px-6">
       <div class="grid gap-10 text-center text-slate-200 sm:grid-cols-2 lg:grid-cols-4">
         <div class="js-animate opacity-0 translate-y-10 transition duration-700">
-          <div class="text-4xl font-semibold tracking-tight text-brand-orange sm:text-5xl">75%</div>
+          <div class="text-4xl font-semibold tracking-tight text-brand-orange sm:text-5xl numscroller" data-max="75"
+            data-suffix="%">0%</div>
           <p class="mt-2 text-xs font-medium text-slate-300">Filterkostenersparnis bei optimierten Lackierfiltern
             möglich</p>
         </div>
         <div class="js-animate opacity-0 translate-y-10 transition duration-700 delay-100">
-          <div class="text-4xl font-semibold tracking-tight text-brand-orange sm:text-5xl">20+</div>
+          <div class="text-4xl font-semibold tracking-tight text-brand-orange sm:text-5xl numscroller" data-max="20"
+            data-suffix="+">0+</div>
           <p class="mt-2 text-xs font-medium text-slate-300">Jahre Erfahrung in der Filtertechnik</p>
         </div>
         <div class="js-animate opacity-0 translate-y-10 transition duration-700 delay-200">
-          <div class="text-4xl font-semibold tracking-tight text-brand-orange sm:text-5xl">2.500+</div>
+          <div class="text-4xl font-semibold tracking-tight text-brand-orange sm:text-5xl numscroller" data-max="2500"
+            data-suffix="+">0+</div>
           <p class="mt-2 text-xs font-medium text-slate-300">Industriekunden aus Produktion &amp; Handwerk</p>
         </div>
         <div class="js-animate opacity-0 translate-y-10 transition duration-700 delay-300">
-          <div class="text-4xl font-semibold tracking-tight text-brand-orange sm:text-5xl">100+</div>
+          <div class="text-4xl font-semibold tracking-tight text-brand-orange sm:text-5xl numscroller" data-max="100"
+            data-suffix="+">0+</div>
           <p class="mt-2 text-xs font-medium text-slate-300">Filterprodukte im Standardsortiment</p>
         </div>
       </div>
@@ -381,8 +385,7 @@
 
       <div class="js-animate grid gap-6 md:grid-cols-3 opacity-0 translate-y-10 transition duration-700 delay-100">
         <!-- Card 1 -->
-        <article
-          class="flex flex-col rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition hover:bg-white/10">
+        <article class="flex flex-col rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
           <h3 class="mb-4 text-lg font-semibold text-brand-orange">Staubaufnahme</h3>
           <ul class="mb-6 space-y-3 text-sm text-slate-300">
             <li class="flex gap-3">
@@ -418,8 +421,7 @@
         </article>
 
         <!-- Card 2 -->
-        <article
-          class="flex flex-col rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition hover:bg-white/10">
+        <article class="flex flex-col rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
           <h3 class="mb-4 text-lg font-semibold text-brand-orange">Luftstrom &amp; Energie</h3>
           <ul class="mb-6 space-y-3 text-sm text-slate-300">
             <li class="flex gap-3">
@@ -455,8 +457,7 @@
         </article>
 
         <!-- Card 3 -->
-        <article
-          class="flex flex-col rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition hover:bg-white/10">
+        <article class="flex flex-col rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
           <h3 class="mb-4 text-lg font-semibold text-brand-orange">Logistik &amp; Kosten</h3>
           <ul class="mb-6 space-y-3 text-sm text-slate-300">
             <li class="flex gap-3">
@@ -650,10 +651,6 @@
             <div class="text-[0.7rem] text-slate-500">Aktuelle Ausgabe</div>
           </div>
           <div class="flex-1 rounded-2xl bg-white px-4 py-3 text-left text-slate-900">
-            <div class="text-lg font-semibold tracking-tight">3</div>
-            <div class="text-[0.7rem] text-slate-500">Produktwelten im Fokus</div>
-          </div>
-          <div class="flex-1 rounded-2xl bg-white px-4 py-3 text-left text-slate-900">
             <div class="text-lg font-semibold tracking-tight">100+</div>
             <div class="text-[0.7rem] text-slate-500">Filterprodukte &amp; Varianten</div>
           </div>
@@ -760,6 +757,7 @@
 
 
   <script src="js/components.js"></script>
+  <script src="js/numscroller.js"></script>
 </body>
 
 </html>
