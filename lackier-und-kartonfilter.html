@@ -534,15 +534,39 @@
       </div>
       <div class="overflow-hidden rounded-xl border border-slate-200">
         <div class="overflow-x-auto">
-          <table border="0" width="799" cellspacing="0" cellpadding="0">
-            <colgroup>
-              <col width="124" />
-              <col span="2" width="100" />
-              <col width="75" />
-              <col width="100" />
-              <col width="100" />
-              <col span="2" width="100" />
-            </colgroup>
+
+        </div>
+      </div>
+    </section>
+    <!-- w-full text-left text-sm text-slate-600 -->
+    <!-- 2. Lackierfilter -->
+    <section class="mt-10">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-orange-50 text-brand-orange">
+          <i class="fa-solid fa-spray-can-sparkles text-sm"></i>
+        </span>
+        <h3 class="text-lg font-bold text-slate-900">Filter für Lackieranlagen</h3>
+      </div>
+      <div class="overflow-hidden rounded-xl border border-slate-200">
+        <div class="overflow-x-auto">
+
+        </div>
+      </div>
+    </section>
+  </template>
+
+  <template id="tpl-kartonfilter">
+    <!-- 3. Kartonfilter -->
+    <section>
+      <div class="flex items-center gap-3 mb-4">
+        <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-orange-50 text-brand-orange">
+          <i class="fa-solid fa-box text-sm"></i>
+        </span>
+        <h3 class="text-lg font-bold text-slate-900">Kartonfilter</h3>
+      </div>
+      <div class="overflow-hidden rounded-xl border border-slate-200">
+        <div class="overflow-x-auto">
+          <table border="0" width="799" cellspacing="0" cellpadding="0" class="w-full text-left text-sm text-slate-600">
             <tbody>
               <tr>
                 <td colspan="4" width="399" height="17">Lieferbarkeit Grobstaubfilter Rollen und Zuschnitte Standard
@@ -946,201 +970,6 @@
       </div>
     </section>
 
-    <!-- 2. Lackierfilter -->
-    <section class="mt-10">
-      <div class="flex items-center gap-3 mb-4">
-        <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-orange-50 text-brand-orange">
-          <i class="fa-solid fa-spray-can-sparkles text-sm"></i>
-        </span>
-        <h3 class="text-lg font-bold text-slate-900">Filter für Lackieranlagen</h3>
-      </div>
-      <div class="overflow-hidden rounded-xl border border-slate-200">
-        <div class="overflow-x-auto">
-          <table class="w-full text-left text-sm text-slate-600">
-            <thead class="bg-slate-50 text-xs uppercase text-slate-500 border-b border-slate-200">
-              <tr>
-                <th class="px-4 py-3 font-semibold">Typ</th>
-                <th class="px-4 py-3 font-semibold">Klasse</th>
-                <th class="px-4 py-3 font-semibold whitespace-nowrap">Dicke (mm)</th>
-                <th class="px-4 py-3 font-semibold">Rollen</th>
-                <th class="px-4 py-3 font-semibold">Zuschnitt</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-slate-100">
-              <tr class="hover:bg-slate-50/50">
-                <td class="px-4 py-2.5 font-medium text-slate-900">V300S</td>
-                <td class="px-4 py-2.5">M5 / F5</td>
-                <td class="px-4 py-2.5">15</td>
-                <td class="px-4 py-2.5">20 x 2 m</td>
-                <td class="px-4 py-2.5 text-green-600"><i class="fa-solid fa-check"></i></td>
-              </tr>
-              <tr class="hover:bg-slate-50/50">
-                <td class="px-4 py-2.5 font-medium text-slate-900">V500S</td>
-                <td class="px-4 py-2.5">M5 / F5</td>
-                <td class="px-4 py-2.5">25</td>
-                <td class="px-4 py-2.5">20 x 2 m</td>
-                <td class="px-4 py-2.5 text-green-600"><i class="fa-solid fa-check"></i></td>
-              </tr>
-              <tr class="hover:bg-slate-50/50">
-                <td class="px-4 py-2.5 font-medium text-slate-900">V600G</td>
-                <td class="px-4 py-2.5">M5 / F5</td>
-                <td class="px-4 py-2.5">25</td>
-                <td class="px-4 py-2.5">20 x 2 m</td>
-                <td class="px-4 py-2.5 text-green-600"><i class="fa-solid fa-check"></i></td>
-              </tr>
-              <tr class=" bg-slate-50/50">
-                <td colspan="5" class="px-4 py-1.5 text-xs font-semibold uppercase text-slate-400 tracking-wider">Paint
-                  Stop (Glasfaser)</td>
-              </tr>
-              <tr class="hover:bg-slate-50/50">
-                <td class="px-4 py-2.5 font-medium text-slate-900">
-                  Paint-Stop grün 3"
-                  <div class="mt-1 text-xs text-slate-500 font-normal">Variabel bis 2m</div>
-                </td>
-                <td class="px-4 py-2.5">G3 / EU3</td>
-                <td class="px-4 py-2.5">65-70</td>
-                <td class="px-4 py-2.5 text-xs leading-relaxed">
-                  <span class="block"><strong>Kleinrollen:</strong> 20m, 25m</span>
-                  <span class="block"><strong>Rollen:</strong> 80m, 91m</span>
-                </td>
-                <td class="px-4 py-2.5 text-slate-400">–</td>
-              </tr>
-              <tr class="hover:bg-slate-50/50">
-                <td class="px-4 py-2.5 font-medium text-slate-900">
-                  Paint-Stop grün 4"
-                  <div class="mt-1 text-xs text-slate-500 font-normal">Variabel bis 2m</div>
-                </td>
-                <td class="px-4 py-2.5">G4 / EU4</td>
-                <td class="px-4 py-2.5">100</td>
-                <td class="px-4 py-2.5 text-xs">
-                  <span class="block text-green-600">Standard lieferbar</span>
-                </td>
-                <td class="px-4 py-2.5 text-green-600"><i class="fa-solid fa-check"></i></td>
-              </tr>
-              <tr class=" bg-slate-50/50">
-                <td colspan="5" class="px-4 py-1.5 text-xs font-semibold uppercase text-slate-400 tracking-wider">Dust
-                  Stop (Staubbindend)</td>
-              </tr>
-              <tr class="hover:bg-slate-50/50">
-                <td class="px-4 py-2.5 font-medium text-slate-900">
-                  Dust-Stop 1"
-                  <div class="mt-1 text-xs text-slate-500 font-normal">Breiten: 1.53 / 1.85 / 2.00 m</div>
-                </td>
-                <td class="px-4 py-2.5">G2 / EU2</td>
-                <td class="px-4 py-2.5">25</td>
-                <td class="px-4 py-2.5 text-xs">
-                  <strong>Kleinrollen:</strong> 20m
-                </td>
-                <td class="px-4 py-2.5 text-green-600"><i class="fa-solid fa-check"></i></td>
-              </tr>
-              <tr class="hover:bg-slate-50/50">
-                <td class="px-4 py-2.5 font-medium text-slate-900">
-                  Dust-Stop 2"
-                  <div class="mt-1 text-xs text-slate-500 font-normal">Breiten: 1.53 / 1.85 / 2.00 m</div>
-                </td>
-                <td class="px-4 py-2.5">G3 / EU3</td>
-                <td class="px-4 py-2.5">50</td>
-                <td class="px-4 py-2.5 text-green-600"><i class="fa-solid fa-check"></i></td>
-                <td class="px-4 py-2.5 text-green-600"><i class="fa-solid fa-check"></i></td>
-              </tr>
-              <tr class="hover:bg-slate-50/50">
-                <td class="px-4 py-2.5 font-medium text-slate-900">
-                  Dust-Stop 4"
-                  <div class="mt-1 text-xs text-slate-500 font-normal">Breiten: 1.53 / 1.85 / 2.00 m</div>
-                </td>
-                <td class="px-4 py-2.5">G4 / EU4</td>
-                <td class="px-4 py-2.5">100</td>
-                <td class="px-4 py-2.5 text-green-600"><i class="fa-solid fa-check"></i></td>
-                <td class="px-4 py-2.5 text-green-600"><i class="fa-solid fa-check"></i></td>
-              </tr>
-              <tr class=" bg-slate-50/50">
-                <td colspan="5" class="px-4 py-1.5 text-xs font-semibold uppercase text-slate-400 tracking-wider">
-                  Glasfaser Sonstige</td>
-              </tr>
-              <tr class="hover:bg-slate-50/50">
-                <td class="px-4 py-2.5 font-medium text-slate-900">GV180G und K</td>
-                <td class="px-4 py-2.5">M5 / F5</td>
-                <td class="px-4 py-2.5">20</td>
-                <td class="px-4 py-2.5">10 x 1,5 m</td>
-                <td class="px-4 py-2.5 text-green-600"><i class="fa-solid fa-check"></i></td>
-              </tr>
-              <tr class="hover:bg-slate-50/50">
-                <td class="px-4 py-2.5 font-medium text-slate-900">UG300 Basis</td>
-                <td class="px-4 py-2.5">G4 / EU4</td>
-                <td class="px-4 py-2.5">20</td>
-                <td class="px-4 py-2.5">5 x 2,5 m</td>
-                <td class="px-4 py-2.5 text-green-600"><i class="fa-solid fa-check"></i></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
-    <!-- Note -->
-    <div class="mt-10 rounded-xl bg-slate-50 p-4 text-xs text-slate-500 border border-slate-100">
-      <p><strong>Hinweis:</strong> Oben aufgeführt sind ausschließlich unsere Standardabmessungen. Sollten Sie
-        Filtermatten mit anderen Abmessungen oder anderen Bezeichnungen benötigen, bitten wir Sie, diese bei uns
-        anzufragen.</p>
-    </div>
-  </template>
-
-  <template id="tpl-kartonfilter">
-    <!-- 3. Kartonfilter -->
-    <section>
-      <div class="flex items-center gap-3 mb-4">
-        <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-orange-50 text-brand-orange">
-          <i class="fa-solid fa-box text-sm"></i>
-        </span>
-        <h3 class="text-lg font-bold text-slate-900">Kartonfilter</h3>
-      </div>
-      <div class="overflow-hidden rounded-xl border border-slate-200">
-        <div class="overflow-x-auto">
-          <table class="w-full text-left text-sm text-slate-600">
-            <thead class="bg-slate-50 text-xs uppercase text-slate-500 border-b border-slate-200">
-              <tr>
-                <th class="px-4 py-3 font-semibold">Höhe</th>
-                <th class="px-4 py-3 font-semibold">Länge (ca.)</th>
-                <th class="px-4 py-3 font-semibold">Tiefe</th>
-                <th class="px-4 py-3 font-semibold">Nutzfläche</th>
-                <th class="px-4 py-3 font-semibold">Lieferbar</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-slate-100">
-              <tr class="hover:bg-slate-50/50">
-                <td class="px-4 py-2.5 font-medium text-slate-900">KF 50</td>
-                <td class="px-4 py-2.5">2 x 10 m</td>
-                <td class="px-4 py-2.5">65 mm</td>
-                <td class="px-4 py-2.5">10 m²</td>
-                <td class="px-4 py-2.5 text-green-600"><i class="fa-solid fa-check"></i></td>
-              </tr>
-              <tr class="hover:bg-slate-50/50">
-                <td class="px-4 py-2.5 font-medium text-slate-900">KF 75</td>
-                <td class="px-4 py-2.5">13 m</td>
-                <td class="px-4 py-2.5">65 mm</td>
-                <td class="px-4 py-2.5">10 m²</td>
-                <td class="px-4 py-2.5 text-green-600"><i class="fa-solid fa-check"></i></td>
-              </tr>
-              <tr class="hover:bg-slate-50/50">
-                <td class="px-4 py-2.5 font-medium text-slate-900">KF 90</td>
-                <td class="px-4 py-2.5">11 m</td>
-                <td class="px-4 py-2.5">65 mm</td>
-                <td class="px-4 py-2.5">10 m²</td>
-                <td class="px-4 py-2.5 text-green-600"><i class="fa-solid fa-check"></i></td>
-              </tr>
-              <tr class="hover:bg-slate-50/50">
-                <td class="px-4 py-2.5 font-medium text-slate-900">KF 100</td>
-                <td class="px-4 py-2.5">10 m</td>
-                <td class="px-4 py-2.5">65 mm</td>
-                <td class="px-4 py-2.5">10 m²</td>
-                <td class="px-4 py-2.5 text-green-600"><i class="fa-solid fa-check"></i></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
     <!-- 4. Trockenkabinen -->
     <section class="mt-10">
       <div class="flex items-center gap-3 mb-4">
@@ -1151,57 +980,10 @@
       </div>
       <div class="overflow-hidden rounded-xl border border-slate-200">
         <div class="overflow-x-auto">
-          <table class="w-full text-left text-sm text-slate-600">
-            <thead class="bg-slate-50 text-xs uppercase text-slate-500 border-b border-slate-200">
-              <tr>
-                <th class="px-4 py-3 font-semibold">Typ</th>
-                <th class="px-4 py-3 font-semibold">Klasse</th>
-                <th class="px-4 py-3 font-semibold">Dimension</th>
-                <th class="px-4 py-3 font-semibold">Temp. max</th>
-                <th class="px-4 py-3 font-semibold">Ausführung</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-slate-100">
-              <tr class="hover:bg-slate-50/50">
-                <td class="px-4 py-2.5 font-medium text-slate-900">SK100</td>
-                <td class="px-4 py-2.5">M5 / F5</td>
-                <td class="px-4 py-2.5">480 x 480 x 14 mm</td>
-                <td class="px-4 py-2.5">100 °C</td>
-                <td class="px-4 py-2.5 text-xs">Steifer Kartonrahmen</td>
-              </tr>
-              <tr class="hover:bg-slate-50/50">
-                <td class="px-4 py-2.5 font-medium text-slate-900">ZH120</td>
-                <td class="px-4 py-2.5">M5 / F5</td>
-                <td class="px-4 py-2.5">480 x 480 x 14 mm</td>
-                <td class="px-4 py-2.5">100 °C</td>
-                <td class="px-4 py-2.5 text-xs">Elastischer Rahmen</td>
-              </tr>
-              <tr class="hover:bg-slate-50/50">
-                <td class="px-4 py-2.5 font-medium text-slate-900">AL200</td>
-                <td class="px-4 py-2.5">M5 / F5</td>
-                <td class="px-4 py-2.5">480 x 480 x 14 mm</td>
-                <td class="px-4 py-2.5 text-slate-900 font-bold">200 °C</td>
-                <td class="px-4 py-2.5 text-xs">Alu-Einfassung</td>
-              </tr>
-              <tr class="hover:bg-slate-50/50">
-                <td class="px-4 py-2.5 font-medium text-slate-900">UG300</td>
-                <td class="px-4 py-2.5">G4 / EU4</td>
-                <td class="px-4 py-2.5">480 x 480 x 14 mm</td>
-                <td class="px-4 py-2.5 text-slate-900 font-bold">300 °C</td>
-                <td class="px-4 py-2.5 text-xs">Alu-Einfassung</td>
-              </tr>
-            </tbody>
-          </table>
+
         </div>
       </div>
     </section>
-
-    <!-- Note -->
-    <div class="mt-10 rounded-xl bg-slate-50 p-4 text-xs text-slate-500 border border-slate-100">
-      <p><strong>Hinweis:</strong> Oben aufgeführt sind ausschließlich unsere Standardabmessungen. Sollten Sie
-        Filtermatten mit anderen Abmessungen oder anderen Bezeichnungen benötigen, bitten wir Sie, diese bei uns
-        anzufragen.</p>
-    </div>
   </template>
   <script src="js/components.js"></script>
 </body>
