@@ -534,125 +534,225 @@
             <!-- Table 1: Grobstaubfilter -->
 
             <style>
-              /* --- Enterprise Table Container & Reset --- */
+              /* ============================
+   Enterprise-ish table styling
+   Targets: table.table-data
+   (No HTML changes required.)
+   ============================ */
+
               .table-data {
-                font-family: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
-                width: 100% !important;
-                border-collapse: collapse !important;
-                background-color: #ffffff;
-                border: 1px solid #e2e8f0 !important;
-                /* Light border around whole table */
-                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-                table-layout: auto !important;
-                /* Override Excel's fixed layout to fit text */
-                color: #334155;
-                /* Slate color text for readability */
-                font-size: 14px !important;
-              }
-
-              /* --- General Cell Styling --- */
-              .table-data td {
-                padding: 12px 16px !important;
-                /* Add breathing room */
-                border: none !important;
-                /* Reset inline borders */
-                border-bottom: 1px solid #e2e8f0 !important;
-                /* Clean horizontal lines */
-                height: auto !important;
-                /* Override fixed pixel heights */
-                vertical-align: middle !important;
-                line-height: 1.5 !important;
-              }
-
-              /* --- Zebra Striping & Hover Effects --- */
-              /* We target rows that have content. This is a heuristic to skip empty spacer rows */
-              .table-data tr:hover td {
-                background-color: #f1f5f9 !important;
+                width: 100%;
+                border-collapse: separate !important;
+                /* beat inline border-collapse */
+                border-spacing: 0;
+                table-layout: fixed;
+                font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+                font-size: 13px;
+                line-height: 1.35;
                 color: #0f172a;
+                /* slate-900 */
+                background: #ffffff;
+                border: 1px solid #e5e7eb;
+                /* gray-200 */
+                border-radius: 10px;
+                overflow: hidden;
+                /* helps with rounded corners */
+                box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06);
               }
 
-              /* --- Section Headers (The Dark Blue Rows) --- */
-              /* Targeting the specific class used for the main titles */
-              .table-data .xl2419300 {
-                background-color: #1e293b !important;
-                /* Enterprise Navy */
-                color: #ffffff !important;
-                font-weight: 600 !important;
-                font-size: 15px !important;
-                text-transform: uppercase;
-                letter-spacing: 0.05em;
-                padding: 16px !important;
-                border-bottom: 3px solid #334155 !important;
+              /* Cells */
+              .table-data td {
+                padding: 10px 12px;
+                vertical-align: middle;
+                border-right: 1px solid #e5e7eb !important;
+                border-bottom: 1px solid #e5e7eb !important;
+                background: #ffffff;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                /* keep it enterprise tidy */
               }
 
-              /* --- Column Headers (The Gray Rows) --- */
-              /* Targeting the classes usually found in the sub-header section */
+              /* Last column / last row borders */
+              .table-data tr td:last-child {
+                border-right: 0 !important;
+              }
+
+              .table-data tbody tr:last-child td {
+                border-bottom: 0 !important;
+              }
+
+              /* Row hover (subtle, “I work in a dashboard” vibe) */
+              .table-data tbody tr:hover td {
+                background: #f8fafc;
+                /* slate-50 */
+              }
+
+              /* Make empty spacer rows less obnoxious */
+              .table-data td:empty {
+                padding-top: 6px;
+                padding-bottom: 6px;
+                background: #ffffff;
+              }
+
+              /* Many cells contain &nbsp; which is not :empty. This helps reduce visual noise. */
+              .table-data td {
+                min-height: 34px;
+              }
+
+              /* ============================
+   Header-ish rows (Excel-style)
+   These are your "xl2xxxx"/"xl29xxx"/etc label cells.
+   We style “likely header” classes and also bold any short label rows.
+   ============================ */
+
+              .table-data .xl2419300,
+              /* big section titles */
               .table-data .xl2919300,
               .table-data .xl3019300,
               .table-data .xl3219300,
+              .table-data .xl3319300,
+              .table-data .xl3419300,
               .table-data .xl3719300,
-              .table-data .xl3119300,
-              .table-data .xl7119300 {
-                background-color: #f8fafc !important;
-                color: #475569 !important;
-                font-weight: 700 !important;
-                font-size: 13px !important;
-                text-transform: uppercase;
-                border-bottom: 2px solid #cbd5e1 !important;
+              .table-data .xl3819300,
+              .table-data .xl6519300,
+              .table-data .xl7119300,
+              .table-data .xl7219300,
+              .table-data .xl7319300 {
+                font-weight: 600;
+                color: #0b1220;
               }
 
-              /* --- Data Highlighting --- */
-              /* Bold product names usually found in these classes */
-              .table-data .xl4019300,
-              .table-data .xl5319300 {
-                font-weight: 500;
+              /* Section title rows: make them look like “cards headers” */
+              .table-data .xl2419300 {
+                background: #0f172a;
+                /* slate-900 */
+                color: #ffffff;
+                letter-spacing: 0.2px;
+                padding-top: 12px;
+                padding-bottom: 12px;
+              }
+
+              /* If the section title has inline borders, nuke them */
+              .table-data .xl2419300 {
+                border-right: 0 !important;
+              }
+
+              /* Sub-headers (the “Filterklasse / Rollen / Zuschnitte” area etc) */
+              .table-data .xl2919300,
+              .table-data .xl3019300,
+              .table-data .xl3219300,
+              .table-data .xl3319300,
+              .table-data .xl3419300,
+              .table-data .xl3719300,
+              .table-data .xl3819300,
+              .table-data .xl6919300,
+              .table-data .xl8219300 {
+                background: #f1f5f9;
+                /* slate-100 */
+                color: #111827;
+                /* gray-900 */
+              }
+
+              /* Give sub-header rows a stronger divider under them */
+              .table-data .xl2919300,
+              .table-data .xl3019300,
+              .table-data .xl3219300,
+              .table-data .xl3319300,
+              .table-data .xl3419300,
+              .table-data .xl3719300,
+              .table-data .xl3819300,
+              .table-data .xl6919300,
+              .table-data .xl8219300 {
+                border-bottom: 1px solid #cbd5e1 !important;
+                /* slate-300 */
+              }
+
+              /* “Maße nach Kundenwunsch” merged cell: make it stand out but not scream */
+              .table-data .xl8519300 {
+                background: #eef2ff;
+                /* indigo-50 */
                 color: #1e293b;
+                /* slate-800 */
+                font-weight: 600;
+                white-space: normal;
+                /* allow wrap for that long text */
               }
 
-              /* --- Centering "x" marks and Numbers --- */
-              /* Availability columns usually use these classes */
+              /* Footer note row at the end: readable, not a wall of pain */
+              .table-data .xl7619300 {
+                background: #f8fafc;
+                /* slate-50 */
+                color: #334155;
+                /* slate-700 */
+                font-size: 12px;
+                line-height: 1.45;
+                white-space: normal;
+                /* allow wrapping */
+              }
+
+              /* ============================
+   Alignment helpers (best effort)
+   ============================ */
+
+              /* Usually numeric-ish columns (thickness, sizes, x markers) look cleaner centered */
+              .table-data td[x\\:num],
+              .table-data td[x\\:str] {
+                /* don’t force center for all, but keep it neat */
+              }
+
+              .table-data td[x\\:num] {
+                text-align: right;
+                font-variant-numeric: tabular-nums;
+              }
+
               .table-data .xl4119300,
               .table-data .xl4719300,
               .table-data .xl5619300,
+              .table-data .xl5719300,
               .table-data .xl6619300,
               .table-data .xl6719300 {
-                text-align: center !important;
-                color: #059669;
-                /* Green for available */
-                font-weight: bold;
+                text-align: center;
+                font-weight: 600;
+                color: #0f172a;
               }
 
-              /* --- The Disclaimer Footer --- */
-              .table-data .xl7619300 {
-                background-color: #fffbeb !important;
-                /* Light yellow note background */
-                color: #92400e !important;
-                /* Brownish text */
-                font-size: 13px !important;
-                font-style: italic;
-                border-top: 2px solid #fcd34d !important;
-                padding: 20px !important;
-                white-space: normal !important;
-                /* Allow text wrapping */
+              /* ============================
+   Accessibility-ish focus (if table contains links later)
+   ============================ */
+              .table-data a {
+                color: #1d4ed8;
+                /* blue-700 */
+                text-decoration: none;
               }
 
-              /* --- Hiding/Cleaning Empty Spacer Rows --- */
-              /* We make empty cells look invisible */
-              .table-data .xl3419300,
-              .table-data .xl2519300,
-              .table-data .xl2619300 {
-                /* If a cell is purely empty spacer, keep it subtle */
-                background-color: transparent !important;
+              .table-data a:hover {
+                text-decoration: underline;
               }
 
-              /* Fix specific merged header alignments */
-              .table-data .xl8219300,
-              .table-data .xl8519300,
-              .table-data .xl7719300 {
-                background-color: #f1f5f9 !important;
-                font-weight: 600 !important;
-                text-align: center !important;
-                border: 1px solid #e2e8f0 !important;
+              /* ============================
+   “Spice” without clown colors:
+   zebra striping only for data-ish rows (not headers)
+   ============================ */
+              .table-data tbody tr:nth-child(even) td {
+                /* extremely subtle */
+                background: #fcfcfd;
+              }
+
+              /* But keep header-ish cells consistent */
+              .table-data tbody tr:nth-child(even) .xl2419300,
+              .table-data tbody tr:nth-child(even) .xl2919300,
+              .table-data tbody tr:nth-child(even) .xl3019300,
+              .table-data tbody tr:nth-child(even) .xl3219300,
+              .table-data tbody tr:nth-child(even) .xl3319300,
+              .table-data tbody tr:nth-child(even) .xl3419300,
+              .table-data tbody tr:nth-child(even) .xl3719300,
+              .table-data tbody tr:nth-child(even) .xl3819300,
+              .table-data tbody tr:nth-child(even) .xl6919300,
+              .table-data tbody tr:nth-child(even) .xl8219300,
+              .table-data tbody tr:nth-child(even) .xl8519300,
+              .table-data tbody tr:nth-child(even) .xl7619300 {
+                background: inherit;
               }
             </style>
 
