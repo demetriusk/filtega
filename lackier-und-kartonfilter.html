@@ -533,8 +533,131 @@
           <div class="space-y-12">
             <!-- Table 1: Grobstaubfilter -->
 
+            <style>
+              /* --- Enterprise Table Container & Reset --- */
+              .table-data {
+                font-family: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
+                width: 100% !important;
+                border-collapse: collapse !important;
+                background-color: #ffffff;
+                border: 1px solid #e2e8f0 !important;
+                /* Light border around whole table */
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+                table-layout: auto !important;
+                /* Override Excel's fixed layout to fit text */
+                color: #334155;
+                /* Slate color text for readability */
+                font-size: 14px !important;
+              }
+
+              /* --- General Cell Styling --- */
+              .table-data td {
+                padding: 12px 16px !important;
+                /* Add breathing room */
+                border: none !important;
+                /* Reset inline borders */
+                border-bottom: 1px solid #e2e8f0 !important;
+                /* Clean horizontal lines */
+                height: auto !important;
+                /* Override fixed pixel heights */
+                vertical-align: middle !important;
+                line-height: 1.5 !important;
+              }
+
+              /* --- Zebra Striping & Hover Effects --- */
+              /* We target rows that have content. This is a heuristic to skip empty spacer rows */
+              .table-data tr:hover td {
+                background-color: #f1f5f9 !important;
+                color: #0f172a;
+              }
+
+              /* --- Section Headers (The Dark Blue Rows) --- */
+              /* Targeting the specific class used for the main titles */
+              .table-data .xl2419300 {
+                background-color: #1e293b !important;
+                /* Enterprise Navy */
+                color: #ffffff !important;
+                font-weight: 600 !important;
+                font-size: 15px !important;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+                padding: 16px !important;
+                border-bottom: 3px solid #334155 !important;
+              }
+
+              /* --- Column Headers (The Gray Rows) --- */
+              /* Targeting the classes usually found in the sub-header section */
+              .table-data .xl2919300,
+              .table-data .xl3019300,
+              .table-data .xl3219300,
+              .table-data .xl3719300,
+              .table-data .xl3119300,
+              .table-data .xl7119300 {
+                background-color: #f8fafc !important;
+                color: #475569 !important;
+                font-weight: 700 !important;
+                font-size: 13px !important;
+                text-transform: uppercase;
+                border-bottom: 2px solid #cbd5e1 !important;
+              }
+
+              /* --- Data Highlighting --- */
+              /* Bold product names usually found in these classes */
+              .table-data .xl4019300,
+              .table-data .xl5319300 {
+                font-weight: 500;
+                color: #1e293b;
+              }
+
+              /* --- Centering "x" marks and Numbers --- */
+              /* Availability columns usually use these classes */
+              .table-data .xl4119300,
+              .table-data .xl4719300,
+              .table-data .xl5619300,
+              .table-data .xl6619300,
+              .table-data .xl6719300 {
+                text-align: center !important;
+                color: #059669;
+                /* Green for available */
+                font-weight: bold;
+              }
+
+              /* --- The Disclaimer Footer --- */
+              .table-data .xl7619300 {
+                background-color: #fffbeb !important;
+                /* Light yellow note background */
+                color: #92400e !important;
+                /* Brownish text */
+                font-size: 13px !important;
+                font-style: italic;
+                border-top: 2px solid #fcd34d !important;
+                padding: 20px !important;
+                white-space: normal !important;
+                /* Allow text wrapping */
+              }
+
+              /* --- Hiding/Cleaning Empty Spacer Rows --- */
+              /* We make empty cells look invisible */
+              .table-data .xl3419300,
+              .table-data .xl2519300,
+              .table-data .xl2619300 {
+                /* If a cell is purely empty spacer, keep it subtle */
+                background-color: transparent !important;
+              }
+
+              /* Fix specific merged header alignments */
+              .table-data .xl8219300,
+              .table-data .xl8519300,
+              .table-data .xl7719300 {
+                background-color: #f1f5f9 !important;
+                font-weight: 600 !important;
+                text-align: center !important;
+                border: 1px solid #e2e8f0 !important;
+              }
+            </style>
+
             <div>
-              <table x:str="" border="0" cellpadding="0" cellspacing="0" width="799" class="xl2519300"
+              <table x:str="" border="0" cellpadding="0" cellspacing="0" width="799" class="table-data"
                 style="border-collapse:collapse;table-layout:fixed;width:599pt">
                 <colgroup>
                   <col class="xl3419300" width="124" style="mso-width-source:userset;mso-width-alt:
